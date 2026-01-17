@@ -39,6 +39,12 @@
             padding: 80px 0;
         }
 
+        @media (max-width: 768px) {
+            .subsidiary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .sub-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -101,7 +107,7 @@
     <nav class="navbar" dir="rtl">
         <div class="container nav-content">
             <a href="ar.html" class="logo">
-                <img src="images/logo.png" alt="IGM Logo">
+                <img loading="lazy" src="images/logo.png" alt="IGM Logo">
             </a>
             <ul class="nav-links">
                 <li><a href="ar.html" class="nav-item">الرئيسية</a></li>
