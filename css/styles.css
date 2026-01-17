@@ -649,6 +649,7 @@ h5 {
     font-size: 1.8rem;
     background: var(--gradient-gold);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -780,6 +781,29 @@ h5 {
 
 .menu-btn.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* Portfolio Layout */
+.portfolio-section {
+    margin-bottom: 120px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        /* Full width on mobile */
+        gap: 15px;
+    }
+
+    .portfolio-section {
+        margin-bottom: 80px;
+    }
 }
 
 /* Mobile Menu Overlay */
