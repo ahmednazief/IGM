@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGM | Our Group</title>
+    <meta name="description" content="IGM Subsidiaries - A robust group of companies operating since 1991.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .page-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(5, 5, 16, 0.8), rgba(5, 5, 16, 0.95)), url('images/owner_office.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .subsidiary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 80px 0;
+        }
+
+        .sub-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .sub-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--accent-gold);
+        }
+
+        .sub-number {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.05);
+            font-weight: 700;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            line-height: 1;
+        }
+
+        .sub-icon {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        .sub-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .sub-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="IGM Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="subsidiaries.html" class="nav-item active">Our Group</a></li>
+                <li><a href="services.html" class="nav-item">Services</a></li>
+                <li><a href="investments.html" class="nav-item">Investments Abroad</a></li>
+                <li><a href="portfolio.html" class="nav-item">Portfolio</a></li>
+                <li><a href="index.html#contact" class="nav-item">Contact</a></li>
+                <li><a href="subsidiaries-ar.html" class="lang-switch"
+                        style="font-family: 'Cairo', sans-serif;">العربية</a></li>
+            </ul>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
+        <div class="mobile-menu-overlay">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-nav-item">Home</a></li>
+                <li><a href="subsidiaries.html" class="mobile-nav-item">Our Group</a></li>
+                <li><a href="services.html" class="mobile-nav-item">Services</a></li>
+                <li><a href="investments.html" class="mobile-nav-item">Investments</a></li>
+                <li><a href="portfolio.html" class="mobile-nav-item">Portfolio</a></li>
+                <li><a href="index.html#contact" class="mobile-nav-item">Contact</a></li>
+                <li><a href="subsidiaries-ar.html" class="lang-switch"
+                        style="font-family: 'Cairo', sans-serif;">العربية</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 4rem;">Our <span class="text-gold">Group</span></h1>
+            <p class="hero-subtitle">A Legacy of Excellence & Innovation Since 1991</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="section">
+        <div class="container">
+            <div class="subsidiary-grid">
+                <!-- 1 -->
+                <div class="sub-card">
+                    <span class="sub-number">01</span>
+                    <i class="fa-solid fa-helmet-safety sub-icon"></i>
+                    <h3 class="sub-title">Medico Misr</h3>
+                    <p class="sub-desc">
+                        <strong>Construction and Road Paving Excellence</strong><br><br>
+                        Established as our flagship construction entity, Medico Misr specializes in large-scale
+                        infrastructure projects including highway construction, urban road paving, and civil
+                        engineering.
+                        With state-of-the-art equipment and certified engineers, we've delivered over 200km of premium
+                        road infrastructure across Egypt.<br><br>
+                        <em>Key Projects:</em> Cairo-Alexandria Highway expansion, New Administrative Capital road
+                        networks,
+                        and multiple government infrastructure contracts.
+                    </p>
+                </div>
+                <!-- 2 -->
+                <div class="sub-card">
+                    <span class="sub-number">02</span>
+                    <i class="fa-solid fa-mountain sub-icon"></i>
+                    <h3 class="sub-title">Al-Ruba'iyah</h3>
+                    <p class="sub-desc">
+                        <strong>Mining & Quarry Operations</strong><br><br>
+                        Operating strategically located mines and quarries in Qena governorate, Al-Ruba'iyah extracts
+                        high-quality limestone, granite, and marble. Our sustainable mining practices combine modern
+                        extraction technology with environmental responsibility, ensuring minimal ecological
+                        impact.<br><br>
+                        <em>Production Capacity:</em> 50,000+ tons monthly of premium construction materials.
+                        Licensed by the Egyptian Mineral Resources Authority with full environmental compliance.
+                    </p>
+                </div>
+                <!-- 3 -->
+                <div class="sub-card">
+                    <span class="sub-number">03</span>
+                    <i class="fa-solid fa-globe sub-icon"></i>
+                    <h3 class="sub-title">International Group for Mining and Import</h3>
+                    <p class="sub-desc">
+                        <strong>Global Trading & Resource Procurement</strong><br><br>
+                        Connecting international mineral markets with regional demand, this entity manages the
+                        importation of specialized mining equipment, raw materials, and industrial commodities.
+                        We maintain partnerships with suppliers across Asia, Europe, and Africa.<br><br>
+                        <em>Services Include:</em> Equipment procurement, logistics coordination, customs clearance,
+                        and supply chain optimization for mining and construction industries.
+                    </p>
+                </div>
+                <!--  4 -->
+                <div class="sub-card">
+                    <span class="sub-number">04</span>
+                    <i class="fa-solid fa-ship sub-icon"></i>
+                    <h3 class="sub-title">International Group (IE)</h3>
+                    <p class="sub-desc">
+                        <strong>Comprehensive Import-Export Solutions</strong><br><br>
+                        Our full-service trading arm handles both import and export operations, specializing in
+                        mineral exports to international markets and importing advanced machinery and technology.
+                        We facilitate millions of dollars in annual trade volume.<br><br>
+                        <em>Export Markets:</em> Middle East, Asia, and European Union.
+                        <em>Certifications:</em> ISO 9001 quality management and full MENA region trade compliance.
+                    </p>
+                </div>
+                <!-- 5 -->
+                <div class="sub-card">
+                    <span class="sub-number">05</span>
+                    <i class="fa-solid fa-oil-well sub-icon"></i>
+                    <h3 class="sub-title">Arab Group for Mining and Petroleum</h3>
+                    <p class="sub-desc">
+                        <strong>Energy & Natural Resources</strong><br><br>
+                        Pioneering integrated solutions in mining and petroleum sectors. This specialized division
+                        focuses on petroleum products distribution, mining operations, and energy sector consulting.
+                        We serve industrial clients requiring both mineral resources and energy solutions.<br><br>
+                        <em>Capabilities:</em> Petroleum product distribution, mining operations management,
+                        energy consulting, and integrated resource planning for industrial complexes.
+                    </p>
+                </div>
+                <!-- 6 -->
+                <div class="sub-card">
+                    <span class="sub-number">06</span>
+                    <i class="fa-solid fa-trowel-bricks sub-icon"></i>
+                    <h3 class="sub-title">IGM Construction</h3>
+                    <p class="sub-desc">
+                        <strong>Flagship Construction & Mining Entity</strong><br><br>
+                        The International Group for Mining and Construction serves as our primary project delivery
+                        vehicle, combining decades of experience in both mining and construction. We execute
+                        turnkey projects from feasibility studies through completion.<br><br>
+                        <em>Expertise:</em> Mining infrastructure, industrial facilities, residential complexes,
+                        commercial buildings, and civil engineering projects. Over 50 major projects delivered
+                        with 98% client satisfaction rating.
+                    </p>
+                </div>
+                <!-- 7 -->
+                <div class="sub-card">
+                    <span class="sub-number">07</span>
+                    <i class="fa-solid fa-hotel sub-icon"></i>
+                    <h3 class="sub-title">Al-Manabea Al-Arabiya</h3>
+                    <p class="sub-desc">
+                        <strong>Tourism, Commercial & Industrial Investment</strong><br><br>
+                        Diversifying our portfolio beyond core mining and construction, Al-Manabea Al-Arabiya
+                        develops tourism infrastructure, commercial real estate, and industrial parks. We create
+                        mixed-use developments that drive regional economic growth.<br><br>
+                        <em>Portfolio:</em> Boutique hotels, commercial centers, industrial zones, and hospitality
+                        management. Strategic positioning in high-growth markets with sustainable development focus.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Footer -->
+    <footer style="background: #02020a; border-top: 1px solid rgba(255,255,255,0.05); padding: 80px 0 30px;">
+        <div class="container">
+            <div class="footer-grid"
+                style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px;">
+                <!-- Brand Options -->
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="IGM Logo" style="width: 100px; margin-bottom: 20px;">
+                    <p style="color: var(--text-muted); line-height: 1.8; max-width: 300px;">
+                        International Group for Mining, Construction, and Agricultural Development.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4 style="color: white; margin-bottom: 25px; font-size: 1.2rem;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px;"><a href="index.html"
+                                style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#c5a059'"
+                                onmouseout="this.style.color='#8892b0'">Home</a></li>
+                        <li style="margin-bottom: 15px;"><a href="subsidiaries.html"
+                                style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#c5a059'" onmouseout="this.style.color='#8892b0'">Our
+                                Subsidiaries</a></li>
+                        <li style="margin-bottom: 15px;"><a href="investments.html"
+                                style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#c5a059'"
+                                onmouseout="this.style.color='#8892b0'">Opportunities</a></li>
+                        <li style="margin-bottom: 15px;"><a href="portfolio.html"
+                                style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#c5a059'"
+                                onmouseout="this.style.color='#8892b0'">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Mini -->
+                <div class="footer-contact">
+                    <h4 style="color: white; margin-bottom: 25px; font-size: 1.2rem;">Contact</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Tower D, Ammar Plaza Towers<br>Nasr City,
+                        Cairo, Egypt</p>
+                    <p style="color: var(--text-muted);"><a href="tel:01000050540"
+                            style="color: var(--accent-gold); text-decoration: none;">01000050540</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom"
+                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; text-align: center;">
+                <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 IGM. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

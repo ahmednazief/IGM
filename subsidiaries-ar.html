@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGM | مجموعتنا | المجموعة الدولية للتعدين والانشاءات والتنمية الزراعية</title>
+    <meta name="description" content="IGM - مجموعة شركات تعمل منذ 1991.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .page-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(5, 5, 16, 0.8), rgba(5, 5, 16, 0.95)), url('images/owner_office.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .subsidiary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 80px 0;
+        }
+
+        .sub-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .sub-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--accent-gold);
+        }
+
+        .sub-number {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.05);
+            font-weight: 700;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        .sub-icon {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        .sub-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: 'Cairo', sans-serif;
+            margin-bottom: 10px;
+            color: #fff;
+            line-height: 1.4;
+        }
+
+        .sub-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" dir="rtl">
+        <div class="container nav-content">
+            <a href="ar.html" class="logo">
+                <img src="images/logo.png" alt="IGM Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="ar.html" class="nav-item">الرئيسية</a></li>
+                <li><a href="subsidiaries-ar.html" class="nav-item active">مجموعتنا</a></li>
+                <li><a href="services-ar.html" class="nav-item">خدماتنا</a></li>
+                <li><a href="investments-ar.html" class="nav-item">استثماراتنا بالخارج</a></li>
+                <li><a href="portfolio-ar.html" class="nav-item">معرض الأعمال</a>
+                </li>
+                <li><a href="ar.html#contact" class="nav-item">تواصل معنا</a></li>
+                <li><a href="subsidiaries.html" class="lang-switch"
+                        style="font-family: 'Outfit', sans-serif;">English</a></li>
+            </ul>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
+        <div class="mobile-menu-overlay">
+            <ul class="mobile-nav-links">
+                <li><a href="ar.html" class="mobile-nav-item">الرئيسية</a></li>
+                <li><a href="subsidiaries-ar.html" class="mobile-nav-item">مجموعتنا</a></li>
+                <li><a href="services-ar.html" class="mobile-nav-item">خدماتنا</a></li>
+                <li><a href="investments-ar.html" class="mobile-nav-item">استثمارات</a></li>
+                <li><a href="portfolio-ar.html" class="mobile-nav-item">معرض الأعمال</a></li>
+                <li><a href="ar.html#contact" class="mobile-nav-item">تواصل معنا</a></li>
+                <li><a href="subsidiaries.html" class="lang-switch"
+                        style="font-family: 'Outfit', sans-serif;">English</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 4rem;">مجموعة <span class="text-gold">شركاتنا</span></h1>
+            <p class="hero-subtitle">تاريخ من التميز والريادة منذ عام ١٩٩١</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="section">
+        <div class="container">
+            <div class="subsidiary-grid">
+                <!-- 1 -->
+                <div class="sub-card">
+                    <span class="sub-number">01</span>
+                    <i class="fa-solid fa-helmet-safety sub-icon"></i>
+                    <h3 class="sub-title">مديكو مصر للانشاءات ورصف الطرق</h3>
+                    <p class="sub-desc">
+                        <strong>التميز في الإنشاءات ورصف الطرق</strong><br><br>
+                        تأسست كمؤسسة إنشائية رائدة في مجموعتنا، تتخصص مديكو مصر في مشاريع البنية التحتية واسعة النطاق
+                        بما في ذلك إنشاء الطرق السريعة، ورصف الطرق الحضرية، والهندسة المدنية. مع أحدث المعدات والمهندسين
+                        المعتمدين، قمنا بتنفيذ أكثر من 200 كم من البنية التحتية الممتازة للطرق في جميع أنحاء
+                        مصر.<br><br>
+                        <em>المشاريع الرئيسية:</em> توسعة طريق القاهرة-الإسكندرية الصحراوي، شبكات طرق العاصمة الإدارية
+                        الجديدة، والعديد من عقود البنية التحتية الحكومية.
+                    </p>
+                </div>
+                <!-- 2 -->
+                <div class="sub-card">
+                    <span class="sub-number">02</span>
+                    <i class="fa-solid fa-mountain sub-icon"></i>
+                    <h3 class="sub-title">الرباعية للمناجم والمحاجر</h3>
+                    <p class="sub-desc">
+                        <strong>عمليات المناجم والمحاجر (قنا)</strong><br><br>
+                        تعمل في مواقع استراتيجية للمناجم والمحاجر في محافظة قنا، وتستخرج الرباعية الحجر الجيري والجرانيت
+                        والرخام عالي الجودة. تجمع ممارسات التعدين المستدامة لدينا بين تكنولوجيا الاستخراج الحديثة
+                        والمسؤولية البيئية، مما يضمن أقل تأثير بيئي ممكن.<br><br>
+                        <em>القدرة الإنتاجية:</em> أكثر من 50,000 طن شهرياً من مواد البناء المتميزة. مرخصة بالكامل من
+                        الهيئة المصرية العامة للثروة المعدنية.
+                    </p>
+                </div>
+                <!-- 3 -->
+                <div class="sub-card">
+                    <span class="sub-number">03</span>
+                    <i class="fa-solid fa-globe sub-icon"></i>
+                    <h3 class="sub-title">المجموعة الدولية للتعدين والاستيراد</h3>
+                    <p class="sub-desc">
+                        <strong>التجارة العالمية وتوريد الموارد</strong><br><br>
+                        تربط أسواق المعادن الدولية بالطلب الإقليمي، وتدير هذه المؤسسة استيراد معدات التعدين المتخصصة
+                        والمواد الخام والسلع الصناعية. نحافظ على شراكات قوية مع كبار الموردين عبر آسيا وأوروبا
+                        وأفريقيا.<br><br>
+                        <em>الخدمات تشمل:</em> توريد المعدات الثقيلة، تنسيق اللوجستيات العالمية، التخليص الجمركي، وتحسين
+                        سلسلة التوريد لقطاعات التعدين والبناء.
+                    </p>
+                </div>
+                <!--  4 -->
+                <div class="sub-card">
+                    <span class="sub-number">04</span>
+                    <i class="fa-solid fa-ship sub-icon"></i>
+                    <h3 class="sub-title">المجموعة الدولية (IE)</h3>
+                    <p class="sub-desc">
+                        <strong>حلول الاستيراد والتصدير المتكاملة</strong><br><br>
+                        يتعامل ذراعنا التجاري الشامل مع عمليات الاستيراد والتصدير بكفاءة عالية، ويتخصص في تصدير المعادن
+                        المصرية إلى الأسواق الدولية واستيراد الآلات والتقنيات المتقدمة. نسهل حجم تجارة سنوي بملايين
+                        الدولارات.<br><br>
+                        <em>أسواق التصدير:</em> الشرق الأوسط، آسيا، ودول الاتحاد الأوروبي.
+                        <em>الاعتمادات:</em> حاصلون على شهادة الأيزو 9001 لضمان الجودة والامتثال التجاري الدولي.
+                    </p>
+                </div>
+                <!-- 5 -->
+                <div class="sub-card">
+                    <span class="sub-number">05</span>
+                    <i class="fa-solid fa-oil-well sub-icon"></i>
+                    <h3 class="sub-title">المجموعة العربية للتعدين والبترول</h3>
+                    <p class="sub-desc">
+                        <strong>الطاقة والموارد الطبيعية</strong><br><br>
+                        ريادة الحلول المتكاملة في قطاعي التعدين والبترول. يركز هذا القسم المتخصص على توزيع المنتجات
+                        البترولية وعمليات التعدين واستشارات قطاع الطاقة. نخدم شريحة واسعة من العملاء الصناعيين الذين
+                        يتطلبون حلولاً متكاملة للموارد والطاقة.<br><br>
+                        <em>القدرات:</em> توزيع المنتجات البترولية، إدارة عمليات التعدين، استشارات الطاقة، والتخطيط
+                        المتكامل للمجمعات الصناعية.
+                    </p>
+                </div>
+                <!-- 6 -->
+                <div class="sub-card">
+                    <span class="sub-number">06</span>
+                    <i class="fa-solid fa-trowel-bricks sub-icon"></i>
+                    <h3 class="sub-title">المجموعة الدولية (IGM Construction)</h3>
+                    <p class="sub-desc">
+                        <strong>المؤسسة الرائدة في التعدين والإنشاءات</strong><br><br>
+                        تعد المجموعة الدولية للتعدين والإنشاءات هي الوسيلة الأساسية لتنفيذ المشاريع الكبرى، حيث تجمع بين
+                        عقود من الخبرة في كل من التعدين والبناء. ننفذ مشاريع تسليم مفتاح تبدأ من دراسات الجدوى وحتى
+                        التسليم النهائي.<br><br>
+                        <em>الخبرة:</em> البنية التحتية للتعدين، المنشآت الصناعية، المجمعات السكنية، والمباني التجارية.
+                        أكثر من 50 مشروعاً استراتيجياً تم تسليمها بنسبة رضا عملاء تتجاوز 98%.
+                    </p>
+                </div>
+                <!-- 7 -->
+                <div class="sub-card">
+                    <span class="sub-number">07</span>
+                    <i class="fa-solid fa-hotel sub-icon"></i>
+                    <h3 class="sub-title">المنابع العربية للاستثمار</h3>
+                    <p class="sub-desc">
+                        <strong>الاستثمار السياحي والتجاري والصناعي</strong><br><br>
+                        تعمل المنابع العربية على تنويع محفظة المجموعة بما يتجاوز القطاعات الأساسية، حيث تطور البنية
+                        التحتية السياحية والعقارات التجارية والمجمعات الصناعية. نخلق وجهات متعددة الاستخدامات تدفع عجلة
+                        النمو الاقتصادي الإقليمي.<br><br>
+                        <em>المحفظة:</em> فنادق بوتيك، مراكز تجارية حديثة، مناطق صناعية، وإدارة الضيافة. تموضع استراتيجي
+                        في الأسواق عالية النمو مع التركيز على التنمية المستدامة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Footer -->
+    <footer style="background: #02020a; border-top: 1px solid rgba(255,255,255,0.05); padding: 80px 0 30px;" dir="rtl">
+        <div class="container">
+            <div class="footer-grid"
+                style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px;">
+                <!-- Brand Options -->
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="IGM Logo" style="width: 100px; margin-bottom: 20px;">
+                    <p style="color: var(--text-muted); line-height: 1.8; max-width: 300px;">
+                        المجموعة الدولية للتعدين والانشاءات والتنمية الزراعية.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4 style="color: white; margin-bottom: 25px; font-size: 1.2rem;">روابط سريعة</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px;"><a href="ar.html"
+                                style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#c5a059'"
+                                onmouseout="this.style.color='#8892b0'">الرئيسية</a></li>
+                        <li style="margin-bottom: 15px;"><a href="subsidiaries-ar.html"
+                                style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#c5a059'"
+                                onmouseout="this.style.color='#8892b0'">مجموعتنا</a></li>
+                        <li style="margin-bottom: 15px;"><a href="investments-ar.html"
+                                style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#c5a059'" onmouseout="this.style.color='#8892b0'">فرص
+                                استثمارية</a></li>
+                        <li style="margin-bottom: 15px;"><a href="portfolio-ar.html"
+                                style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#c5a059'" onmouseout="this.style.color='#8892b0'">معرض
+                                الأعمال</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Mini -->
+                <div class="footer-contact">
+                    <h4 style="color: white; margin-bottom: 25px; font-size: 1.2rem;">تواصل معنا</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">برج D، أبراج عمار بلازا<br>مدينة نصر،
+                        القاهرة، مصر</p>
+                    <p style="color: var(--text-muted);"><a href="tel:01000050540"
+                            style="color: var(--accent-gold); text-decoration: none;">01000050540</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom"
+                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; text-align: center;">
+                <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 IGM. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

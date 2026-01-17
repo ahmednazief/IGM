@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGM | Portfolio</title>
+    <meta name="description"
+        content="IGM Portfolio - Exploring our diverse projects in mining, agriculture, and construction.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .page-hero {
+            height: 60vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="IGM Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="subsidiaries.html" class="nav-item">Our Group</a></li>
+                <li><a href="services.html" class="nav-item">Services</a></li>
+                <li><a href="investments.html" class="nav-item">Investments Abroad</a></li>
+                <li><a href="portfolio.html" class="nav-item active">Portfolio</a></li>
+                <li><a href="index.html#contact" class="nav-item">Contact</a></li>
+                <li><a href="portfolio-ar.html" class="lang-switch"
+                        style="font-family: 'Cairo', sans-serif;">العربية</a></li>
+            </ul>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
+        <div class="mobile-menu-overlay">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-nav-item">Home</a></li>
+                <li><a href="subsidiaries.html" class="mobile-nav-item">Our Group</a></li>
+                <li><a href="services.html" class="mobile-nav-item">Services</a></li>
+                <li><a href="investments.html" class="mobile-nav-item">Investments Abroad</a></li>
+                <li><a href="portfolio.html" class="mobile-nav-item">Portfolio</a></li>
+                <li><a href="index.html#contact" class="mobile-nav-item">Contact</a></li>
+                <li><a href="portfolio-ar.html" class="lang-switch"
+                        style="font-family: 'Cairo', sans-serif;">العربية</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="images/WhatsApp Video 2026-01-16 at 1.09.03 PM.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 4rem;">Our <span class="text-gold">Portfolio</span></h1>
+            <p class="hero-subtitle">Comprehensive Global Operations & Diversified Assets</p>
+        </div>
+    </header>
+
+    <!-- Sector Navigation -->
+    <div class="sector-nav">
+        <div class="container">
+            <a href="#agriculture" class="sector-link">Agriculture</a>
+            <a href="#mining" class="sector-link">Mining</a>
+            <a href="#infrastructure" class="sector-link">Infrastructure</a>
+            <a href="#equipment" class="sector-link">Equipment</a>
+            <a href="#video-gallery" class="sector-link">Operations Video</a>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Agriculture Section -->
+            <div id="agriculture" class="portfolio-section" style="margin-bottom: 120px;">
+                <div style="max-width: 800px; margin-bottom: 50px;">
+                    <h2 class="section-title">Sustainable <span class="text-gold">Agriculture</span></h2>
+                    <p style="color: var(--text-muted); line-height: 1.8; font-size: 1.1rem;">
+                        IGM's agricultural division manages over 15,000 hectares of high-yield farmland. We specialize
+                        in large-scale date palm cultivation, organic crop production, and advanced automated irrigation
+                        systems that ensure resource efficiency and food security.
+                    </p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                    <div class="project-item"><img src="images/new_palm_1.jpg" alt="Palm Plantation">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Agriculture</span>
+                            <h3>Date Palm Groves</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/new_palm_2.jpg" alt="Palm Grove Management">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Agriculture</span>
+                            <h3>Grove Management</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/new_crops_1.jpg" alt="Organic Crops">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Agriculture</span>
+                            <h3>Organic Farming</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/new_crops_2.jpg" alt="Crop Diversification">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Agriculture</span>
+                            <h3>Crop Rotation</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/new_irrigation.jpg" alt="Smart Irrigation">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Technology</span>
+                            <h3>Automated Systems</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/WhatsApp Image 2026-01-16 at 12.17.42 PM.jpeg"
+                            alt="Field Harvest">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Operations</span>
+                            <h3>Harvest Infrastructure</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/WhatsApp Image 2026-01-16 at 12.17.54 PM.jpeg"
+                            alt="Farm Site">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Operations</span>
+                            <h3>Site Development</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/WhatsApp Image 2026-01-16 at 12.18.02 PM.jpeg"
+                            alt="Logistics">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Logistics</span>
+                            <h3>Distribution Hubs</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mining Section -->
+            <div id="mining" class="portfolio-section" style="margin-bottom: 120px;">
+                <div style="max-width: 800px; margin-bottom: 50px;">
+                    <h2 class="section-title">Strategic <span class="text-gold">Mining</span></h2>
+                    <p style="color: var(--text-muted); line-height: 1.8; font-size: 1.1rem;">
+                        Our mining operations focus on high-purity mineral extraction, including limestone, granite, and
+                        phosphates. We utilize state-of-the-art precision machinery to maintain high output while
+                        adhering to strict environmental and safety standards in the MENA region.
+                    </p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                    <div class="project-item"><img src="images/project_mining.jpg" alt="Open Pit Mining">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Mining</span>
+                            <h3>Resource Extraction</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/WhatsApp Image 2026-01-16 at 4.01.59 PM.jpeg"
+                            alt="Material Processing">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Processing</span>
+                            <h3>Mineral Grading</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/WhatsApp Image 2026-01-16 at 4.02.02 PM.jpeg"
+                            alt="Quarry Site">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Mining</span>
+                            <h3>Site Preparation</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/WhatsApp Image 2026-01-16 at 4.02.05 PM.jpeg"
+                            alt="Extraction Site">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Mining</span>
+                            <h3>Quarry Operations</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infrastructure Section -->
+            <div id="infrastructure" class="portfolio-section" style="margin-bottom: 120px;">
+                <div style="max-width: 800px; margin-bottom: 50px;">
+                    <h2 class="section-title">Civil <span class="text-gold">Infrastructure</span></h2>
+                    <p style="color: var(--text-muted); line-height: 1.8; font-size: 1.1rem;">
+                        IGM is a leader in large-scale civil engineering and reclamation projects. From transforming
+                        arid landscapes into productive assets to developing critical road networks and industrial
+                        zones, we build the foundation of modern progress.
+                    </p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                    <div class="project-item"><img src="images/project_landscape.jpg" alt="Land Reclamation">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Development</span>
+                            <h3>Land Transformation</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/WhatsApp Image 2026-01-16 at 12.19.24 PM.jpeg"
+                            alt="Road Infrastructure">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Construction</span>
+                            <h3>Road Infrastructure</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/WhatsApp Image 2026-01-16 at 4.01.54 PM.jpeg"
+                            alt="Site Prep">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Construction</span>
+                            <h3>Civil Works</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/WhatsApp Image 2026-01-16 at 4.01.58 PM.jpeg"
+                            alt="Industrial Zone">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Development</span>
+                            <h3>Industrial Grade</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equipment Section -->
+            <div id="equipment" class="portfolio-section" style="margin-bottom: 120px;">
+                <div style="max-width: 800px; margin-bottom: 50px;">
+                    <h2 class="section-title">Equipment <span class="text-gold">Fleet</span></h2>
+                    <p style="color: var(--text-muted); line-height: 1.8; font-size: 1.1rem;">
+                        Our strength lies in our robust fleet of heavy machinery. From high-performance mineral
+                        processing units to vast agricultural equipment networks, our assets enable us to execute
+                        complex projects with unmatched efficiency.
+                    </p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                    <div class="project-item"><img src="images/heavy_machinery_1.jpg" alt="Mining Unit">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Machinery</span>
+                            <h3>Processing Units</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/heavy_machinery_3.jpg" alt="Heavy Fleet">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Machinery</span>
+                            <h3>Specialized Fleet</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/WhatsApp Image 2026-01-16 at 12.19.21 PM.jpeg"
+                            alt="Technological Assets">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Machinery</span>
+                            <h3>Site Assets</h3>
+                        </div>
+                    </div>
+                    <div class="project-item"><img src="images/WhatsApp Image 2026-01-16 at 12.19.23 PM.jpeg"
+                            alt="Heavy Equipment">
+                        <div class="project-overlay"></div>
+                        <div class="project-details"><span>Machinery</span>
+                            <h3>Mobile Units</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Global Video Operations -->
+            <div id="video-gallery" class="portfolio-section"
+                style="margin-top: 100px; padding: 80px 40px; background: rgba(255,255,255,0.02); border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Operational <span
+                        class="text-gold">Insights</span></h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                    <div
+                        style="background: #000; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                        <video controls style="width: 100%; display: block;" poster="images/project_mining.jpg">
+                            <source src="images/WhatsApp Video 2026-01-16 at 1.12.30 PM.mp4" type="video/mp4">
+                        </video>
+                        <div style="padding: 20px;">
+                            <h4 style="color: white; margin-bottom: 5px;">Mining Operations</h4>
+                            <p style="color: #888; font-size: 0.9rem;">Live footage from mineral extraction sites.</p>
+                        </div>
+                    </div>
+                    <div
+                        style="background: #000; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                        <video controls style="width: 100%; display: block;" poster="images/new_palm_1.jpg">
+                            <source src="images/WhatsApp Video 2026-01-16 at 9.21.55 PM.mp4" type="video/mp4">
+                        </video>
+                        <div style="padding: 20px;">
+                            <h4 style="color: white; margin-bottom: 5px;">Agricultural Scale</h4>
+                            <p style="color: #888; font-size: 0.9rem;">Overview of large-scale plantation management.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        style="background: #000; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                        <video controls style="width: 100%; display: block;" poster="images/heavy_machinery_1.jpg">
+                            <source src="images/WhatsApp Video 2026-01-16 at 12.17.46 PM.mp4" type="video/mp4">
+                        </video>
+                        <div style="padding: 20px;">
+                            <h4 style="color: white; margin-bottom: 5px;">Processing Systems</h4>
+                            <p style="color: #888; font-size: 0.9rem;">Automated mineral processing in action.</p>
+                        </div>
+                    </div>
+                    <div
+                        style="background: #000; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                        <video controls style="width: 100%; display: block;" poster="images/new_irrigation.jpg">
+                            <source src="images/WhatsApp Video 2026-01-16 at 4.18.30 PM.mp4" type="video/mp4">
+                        </video>
+                        <div style="padding: 20px;">
+                            <h4 style="color: white; margin-bottom: 5px;">Irrigation Technology</h4>
+                            <p style="color: #888; font-size: 0.9rem;">Smart water management and distribution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WhatsApp Bulk Gallery -->
+            <div style="margin-top: 150px; padding-bottom: 40px;">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">Complete <span
+                        class="text-gold">Site Gallery</span></h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.17.41 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.17.44 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.17.45 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.17.47 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.17.48 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.17.49 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.17.51 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.17.52 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.17.55 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.17.56 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.17.57 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.17.59 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.18.00 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.18.01 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 12.18.03 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/WhatsApp Image 2026-01-16 at 4.01.51 PM.jpeg" alt="IGM Site"
+                        style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Footer -->
+    <footer style="background: #02020a; border-top: 1px solid rgba(255,255,255,0.05); padding: 80px 0 30px;">
+        <div class="container">
+            <div class="footer-grid"
+                style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px;">
+                <!-- Brand Options -->
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="IGM Logo" style="width: 100px; margin-bottom: 20px;">
+                    <p style="color: var(--text-muted); line-height: 1.8; max-width: 300px;">
+                        International Group for Mining, Construction, and Agricultural Development.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4 style="color: white; margin-bottom: 25px; font-size: 1.2rem;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px;"><a href="index.html"
+                                style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#c5a059'"
+                                onmouseout="this.style.color='#8892b0'">Home</a>
+                        </li>
+                        <li style="margin-bottom: 15px;"><a href="subsidiaries.html"
+                                style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#c5a059'" onmouseout="this.style.color='#8892b0'">Our
+                                Group</a></li>
+                        <li style="margin-bottom: 15px;"><a href="investments.html"
+                                style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#c5a059'"
+                                onmouseout="this.style.color='#8892b0'">Investments
+                                Abroad</a></li>
+                        <li style="margin-bottom: 15px;"><a href="portfolio.html"
+                                style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;"
+                                onmouseover="this.style.color='#c5a059'"
+                                onmouseout="this.style.color='#8892b0'">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Mini -->
+                <div class="footer-contact">
+                    <h4 style="color: white; margin-bottom: 25px; font-size: 1.2rem;">Contact</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Tower D, Ammar Plaza Towers<br>Nasr City,
+                        Cairo, Egypt</p>
+                    <p style="color: var(--text-muted);"><a href="tel:01000050540"
+                            style="color: var(--accent-gold); text-decoration: none;">01000050540</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom"
+                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; text-align: center;">
+                <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 IGM. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
