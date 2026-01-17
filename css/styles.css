@@ -582,6 +582,30 @@ h5 {
     background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.3), transparent);
 }
 
+/* Projects Grid Modern */
+.projects-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 60px;
+    column-gap: 40px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+    .projects-grid-modern {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid-modern {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+}
+
 /* Premium Contact Cards Grid */
 .contact-cards-grid {
     display: grid;
