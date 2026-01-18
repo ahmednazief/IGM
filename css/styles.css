@@ -1437,15 +1437,32 @@ html[dir="rtl"] .footer-links a:hover {
     pointer-events: all;
 }
 
-/* Premium navigation links container */
+/* Dark overlay backdrop */
+.mobile-menu-overlay::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.mobile-menu-overlay.active::after {
+    opacity: 1;
+}
+
+/* Modern navigation container */
 .mobile-nav-links {
     list-style: none;
-    text-align: center;
-    padding: 60px 40px;
+    padding: 0;
+    margin: 0;
     position: relative;
     z-index: 2;
-    max-width: 500px;
-    width: 100%;
 }
 
 /* Individual menu items with luxury styling */
