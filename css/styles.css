@@ -789,14 +789,7 @@ h5 {
     /* Above overlay */
 }
 
-.menu-btn__burger {
-    width: 25px;
-    height: 2px;
-    background: var(--text-main);
-    border-radius: 5px;
-    transition: all .5s ease-in-out;
-}
-
+.menu-btn__burger,
 .menu-btn__burger::before,
 .menu-btn__burger::after {
     content: '';
@@ -818,10 +811,37 @@ h5 {
 
 /* Animation for Open State */
 .menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
     background: transparent;
     box-shadow: none;
+    transform: translateX(-50px);
+    /* Move main line out */
 }
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* Ensure button is above overlay */
+.menu-btn {
+    z-index: 2001;
+    /* Higher than overlay (2000) */
+}
+
+@media (max-width: 400px) {
+    .logo img {
+        width: 70px;
+        /* Smaller logo on very small screens */
+    }
+
+    .navbar {
+        padding: 8px 0;
+    }
+}
+
 
 /* =========================================
    PREMIUM ENHANCEMENTS for USA & Canada Pages
@@ -1029,13 +1049,8 @@ h5 {
     }
 }
 
-.menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-}
+/* Old animation block removed/consolidated above */
 
-.menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-}
 
 /* Portfolio Layout */
 .portfolio-section {
@@ -1203,6 +1218,13 @@ html[dir="rtl"] .hero-content {
 html[dir="rtl"] .nav-links {
     flex-direction: row-reverse;
 }
+
+html[dir="rtl"] .menu-btn {
+    margin-right: auto;
+    /* Push to left in RTL flex container if needed, or adjust alignment */
+    /* Ensure no conflict with logo */
+}
+
 
 html[dir="rtl"] .contact-item {
     text-align: right;
