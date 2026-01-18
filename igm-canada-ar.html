@@ -4,73 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IGM Corp Canada | التميز الصناعي</title>
-    <!-- Fonts & Icons -->
+    <title>IGM Canada | عمليات التعدين والصناعة</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Cinzel:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Cinzel:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
-            font-family: 'Cairo', sans-serif;
+            font-family: '
+
+                Cairo', sans-serif;
+
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero-title-large {
             font-family: 'Cairo', sans-serif;
+            font-size: 4.5rem;
             font-weight: 700;
-            font-size: 4rem;
             letter-spacing: 0;
             background: var(--gradient-gold);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(197, 160, 89, 0.3);
         }
 
-        .gallery-grid {
+        .machinery-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-top: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
         }
 
-        .gallery-item {
+        .machinery-card {
             position: relative;
-            height: 250px;
-            border-radius: 10px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            transition: all 0.4s ease;
         }
 
-        .gallery-item img {
+        .machinery-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(197, 160, 89, 0.6);
+            box-shadow: 0 15px 40px rgba(197, 160, 89, 0.3);
+        }
+
+        .machinery-card img {
             width: 100%;
-            height: 100%;
+            height: 300px;
             object-fit: cover;
-            transition: transform 0.5s;
+            transition: transform 0.6s ease;
         }
 
-        .gallery-item:hover img {
+        .machinery-card:hover img {
             transform: scale(1.1);
-        }
-
-        .highlight-text {
-            border-right: 3px solid var(--accent-gold);
-            /* RTL */
-            padding-right: 20px;
-            color: white;
-            font-size: 1.1rem;
-            margin: 30px 0;
-            font-style: italic;
-        }
-
-        @media (max-width: 992px) {
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
 
         @media (max-width: 768px) {
@@ -78,7 +81,7 @@
                 font-size: 2.5rem;
             }
 
-            .gallery-grid {
+            .machinery-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -97,7 +100,6 @@
             <ul class="nav-links">
                 <li><a href="ar.html" class="nav-item">الرئيسية</a></li>
                 <li><a href="subsidiaries-ar.html" class="nav-item active">مجموعتنا</a></li>
-                <!-- Special Dropdown -->
                 <li class="special-nav-item">
                     <a href="global-branches-ar.html" class="nav-item special-nav-btn">
                         <i class="fa-solid fa-globe"></i> فروعنا العالمية
@@ -105,8 +107,7 @@
                     <div class="special-dropdown">
                         <a href="igm-usa-ar.html" class="dropdown-link"
                             style="text-align: right; justify-content: flex-start;">
-                            <img src="https://flagcdn.com/w40/us.png" alt="USA" class="dropdown-flag"
-                                style="margin-left: 10px;">
+                            <img src="https://flagcdn.com/w40/us.png" alt="USA" class="dropdown-flag">
                             <div class="dropdown-text">
                                 <span>IGM Investments USA</span>
                                 <small>USA LLC</small>
@@ -114,8 +115,7 @@
                         </a>
                         <a href="igm-canada-ar.html" class="dropdown-link"
                             style="text-align: right; justify-content: flex-start;">
-                            <img src="https://flagcdn.com/w40/ca.png" alt="Canada" class="dropdown-flag"
-                                style="margin-left: 10px;">
+                            <img src="https://flagcdn.com/w40/ca.png" alt="Canada" class="dropdown-flag">
                             <div class="dropdown-text">
                                 <span>IGM Corp Canada</span>
                                 <small>Corporation</small>
@@ -141,83 +141,244 @@
     </nav>
 
     <!-- Parallax Hero -->
-    <header class="parallax-hero" style="background-image: url('images/canada_machine_5.jpg');">
-        <div class="container" style="text-align: center; position: relative; z-index: 2;">
+    <header class="parallax-hero"
+        style="background-image: url('images/canada_machinery_1.jpg'); background-size: cover; background-position: center; background-attachment: fixed; position: relative; min-height: 100vh;">
+        <!-- Elegant Blur Overlay -->
+        <div
+            style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(5,5,16,0.3) 0%, rgba(5,5,16,0.85) 100%); backdrop-filter: blur(2px); z-index: 1;">
+        </div>
+
+        <div class="container"
+            style="text-align: center; position: relative; z-index: 2; padding: 150px 20px; display: flex; flex-direction: column; justify-content: center; min-height: 100vh;">
             <img src="https://flagcdn.com/w160/ca.png" alt="Canada"
-                style="width: 80px; box-shadow: 0 0 20px rgba(0,0,0,0.5); margin-bottom: 30px;">
-            <h1 class="hero-title-large">IGM Corp <br>Canada</h1>
-            <p style="font-size: 1.2rem; color: #ccc; max-width: 700px; margin: 0 auto;">
-                المجموعة الدولية للتعدين والبترول والمشتقات والإنشاءات
+                style="width: 100px; box-shadow: 0 0 30px rgba(197,160,89,0.5); margin-bottom: 40px; border-radius: 8px; margin-right: auto; margin-left: auto;">
+            <h1 class="hero-title-large" style="margin-bottom: 25px;">IGM Corp<br>Canada</h1>
+            <p
+                style="font-size: 1.3rem; color: #e0e0e0; max-width: 750px; margin: 0 auto; letter-spacing: 2px; font-weight: 300;">
+                التعدين • البترول • الإنشاءات • التميز الصناعي
             </p>
-            <div style="margin-top: 50px;">
-                <div
-                    style="display: inline-block; border: 1px solid var(--accent-gold); padding: 15px 40px; border-radius: 50px; background: rgba(0,0,0,0.5);">
-                    <i class="fa-solid fa-gavel" style="color: var(--accent-gold); margin-left: 10px;"></i>
-                    مسجلة وفقاً لقانون الشركات الكندي (CBCA)
+        </div>
+    </header>
+
+    <!-- Mission Section -->
+    <section class="section-premium" style="padding: 80px 0;">
+        <div class="container">
+            <div style="text-align: center; max-width: 900px; margin: 0 auto 80px;">
+                <h2 class="section-title">مركز <span class="gold-gradient-text">العمليات الكندية</span></h2>
+                <p style="color: #ccc; font-size: 1.3rem; line-height: 1.9; margin-top: 30px;">
+                    تمثل IGM Corp Canada التزامنا باستخراج الموارد المسؤول والتنمية الصناعية في أمريكا الشمالية. تأسست
+                    الشركة على يد محمود نظيف، وتجمع بين عقود من الخبرة العالمية في مجال التعدين والابتكار الكندي
+                    والإشراف البيئي.
+                </p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stat-grid-premium" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                <div class="stat-card-premium"
+                    style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 160, 89, 0.2); padding: 30px; text-align: center; border-radius: 12px;">
+                    <div class="stat-val"
+                        style="font-size: 2.5rem; color: var(--accent-gold); font-family: 'Cinzel', serif;">+20</div>
+                    <p style="color: var(--text-muted); margin-top: 15px;">عامًا من التميز في التعدين</p>
+                </div>
+                <div class="stat-card-premium"
+                    style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 160, 89, 0.2); padding: 30px; text-align: center; border-radius: 12px;">
+                    <div class="stat-val"
+                        style="font-size: 2.5rem; color: var(--accent-gold); font-family: 'Cinzel', serif;">+15</div>
+                    <p style="color: var(--text-muted); margin-top: 15px;">أسطول المعدات الثقيلة</p>
+                </div>
+                <div class="stat-card-premium"
+                    style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 160, 89, 0.2); padding: 30px; text-align: center; border-radius: 12px;">
+                    <div class="stat-val"
+                        style="font-size: 2.5rem; color: var(--accent-gold); font-family: 'Cinzel', serif;">CBCA</div>
+                    <p style="color: var(--text-muted); margin-top: 15px;">مسجلة فيدراليًا</p>
                 </div>
             </div>
         </div>
-        <!-- Elegant Blur Overlay -->
-        <div style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(5,5,16,0.3) 0%, rgba(5,5,16,0.85) 100%); backdrop-filter: blur(2px); z-index: 1;"></div>
+    </section>
 
-    </header>
+    <!-- Core Divisions -->
+    <section class="section-premium" style="background: rgba(255,255,255,0.02); padding: 100px 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 80px;">الأقسام <span
+                    class="gold-gradient-text">التشغيلية</span></h2>
 
-    <!-- Content Section -->
+            <div class="detail-grid" style="margin-bottom: 40px;">
+                <div class="glass-card" style="padding: 40px;">
+                    <i class="fa-solid fa-mountain" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                    <h3 style="color: white; margin: 25px 0 20px; font-size: 1.8rem;">عمليات التعدين</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                        التخصص في المعادن الثمينة والمعادن الصناعية واستخراج عناصر الأرض النادرة. تلتزم عملياتنا بأعلى
+                        المعايير الكندية البيئية والسلامة.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>تعدين الذهب والفضة</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>استخراج النحاس والزنك</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>المعادن الصناعية</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card" style="padding: 40px;">
+                    <i class="fa-solid fa-oil-well" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                    <h3 style="color: white; margin: 25px 0 20px; font-size: 1.8rem;">قسم البترول</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                        استكشاف وتطوير موارد النفط والغاز في غرب كندا، باستخدام تقنيات الحفر المتقدمة وطرق الاستخراج
+                        المستدامة.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>تطوير الرمال النفطية</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>استخراج الغاز الطبيعي</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>البنية التحتية لخطوط الأنابيب
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="detail-grid">
+                <div class="glass-card" style="padding: 40px;">
+                    <i class="fa-solid fa-industry" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                    <h3 style="color: white; margin: 25px 0 20px; font-size: 1.8rem;">المشتقات والمعالجة</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                        تصنيع المنتجات الثانوية الصناعية والمشتقات من عمليات التعدين لدينا، وإنشاء مواد ذات قيمة مضافة
+                        لقطاعات البناء والتصنيع.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>معالجة المعادن</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>المواد الكيميائية الصناعية
+                        </li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>مواد البناء</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card" style="padding: 40px;">
+                    <i class="fa-solid fa-helmet-safety" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                    <h3 style="color: white; margin: 25px 0 20px; font-size: 1.8rem;">البناء والمقاولات</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                        البناء المدني الثقيل وتطوير البنية التحتية وخدمات بناء مرافق التعدين المتخصصة في جميع أنحاء
+                        كندا.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>البنية التحتية للتعدين</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>المنشآت الصناعية</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>المشاريع المدنية الثقيلة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Machinery Fleet -->
     <section class="section-premium">
         <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 30px;">أسطول <span
+                    class="gold-gradient-text">المعدات المتقدمة</span></h2>
+            <p
+                style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto 60px; font-size: 1.1rem; line-height: 1.8;">
+                يمثل أسطول معداتنا الحديثة ملايين الدولارات من الاستثمار الرأسمالي، مما يتيح عمليات استخراج ومعالجة
+                موارد فعالة وآمنة ومسؤولة بيئيًا.
+            </p>
+
+            <div class="machinery-grid">
+                <div class="machinery-card">
+                    <img src="images/canada_machinery_1.jpg" alt="Mining Equipment">
+                </div>
+                <div class="machinery-card">
+                    <img src="images/canada_machinery_2.jpg" alt="Drilling Rig">
+                </div>
+                <div class="machinery-card">
+                    <img src="images/canada_machinery_3.jpg" alt="Processing Equipment">
+                </div>
+                <div class="machinery-card">
+                    <img src="images/canada_machinery_4.jpg" alt="Heavy Machinery">
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <div
+                    style="display: inline-grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center;">
+                    <div>
+                        <i class="fa-solid fa-truck-monster"
+                            style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 15px;"></i>
+                        <h4 style="color: white; margin-bottom: 10px;">شاحنات النقل</h4>
+                        <p style="color: var(--text-muted);">سعة 500 طن</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-gears"
+                            style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 15px;"></i>
+                        <h4 style="color: white; margin-bottom: 10px;">منصات الحفر</h4>
+                        <p style="color: var(--text-muted);">استكشاف متقدم</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-cog"
+                            style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 15px;"></i>
+                        <h4 style="color: white; margin-bottom: 10px;">مصانع المعالجة</h4>
+                        <p style="color: var(--text-muted);">أنظمة آلية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder -->
+    <section class="section-premium" style="background: rgba(255,255,255,0.02); padding: 100px 0;">
+        <div class="container">
             <div class="detail-grid">
+                <div class="glass-card" style="padding: 50px;">
+                    <i class="fa-solid fa-user-tie"
+                        style="font-size: 4rem; color: var(--accent-gold); margin-bottom: 30px;"></i>
+                    <h3
+                        style="color: white; font-family: 'Cairo', serif; margin-bottom: 20px; font-size: 2rem; font-weight: 700;">
+                        محمود نظيف</h3>
+                    <p style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 30px;">المؤسس والرئيس
+                        التنفيذي</p>
+                    <p style="color: var(--text-muted); line-height: 1.9; margin-bottom: 20px;">
+                        مع أكثر من 30 عامًا من الخبرة الدولية في التعدين والبناء، أسس محمود نظيف IGM Corp Canada لجلب
+                        الخبرة العالمية إلى تطوير الموارد الكندية.
+                    </p>
+                    <p style="color: var(--text-muted); line-height: 1.9;">
+                        تجمع رؤيته بين الممارسات المستدامة والتكنولوجيا المتطورة، مما يضع IGM Canada كرائدة في الاستخراج
+                        المسؤول للموارد.
+                    </p>
+                </div>
 
                 <div class="detail-text">
-                    <h2 class="section-title">قوة <span class="gold-gradient-text">صناعية</span></h2>
-                    <p class="lead-text" style="color: #ccc; font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px;">
-                        تأسست IGM Corp Canada بواسطة محمود ناصف، وتقف في طليعة الصناعات الثقيلة.
-                        من خلال عملنا بموجب قانون الشركات التجارية الكندي، ندمج دقة الهندسة في أمريكا الشمالية مع نطاق
-                        تشغيلنا العالمي.
-                    </p>
+                    <h2 class="section-title">رؤية <span class="gold-gradient-text">القيادة</span></h2>
+                    <blockquote
+                        style="border-right: 4px solid var(--accent-gold); padding-right: 30px; margin: 40px 0; font-style: italic; color: #ccc; font-size: 1.3rem; line-height: 1.8; text-align: right;">
+                        "تمثل كندا مستقبل تطوير الموارد الأخلاقي المستدام. نحن ملتزمون بخلق القيمة مع الحفاظ على البيئة
+                        للأجيال القادمة."
+                    </blockquote>
 
-                    <div class="highlight-text">
-                        "قيادة مستقبل الطاقة والبنية التحتية من خلال التكنولوجيا المتقدمة والمرونة الثابتة."
-                    </div>
-
-                    <h3 style="color: white; font-family: 'Cairo', sans-serif; margin-bottom: 20px;">الأقسام التشغيلية
-                    </h3>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div class="glass-card" style="padding: 20px;">
-                            <i class="fa-solid fa-gem text-gold" style="font-size: 1.5rem; margin-bottom: 10px;"></i>
-                            <h4 style="color: white;">التعدين</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">الاستخراج المتقدم للمعادن الثمينة
-                                والمعادن الصناعية.</p>
-                        </div>
-                        <div class="glass-card" style="padding: 20px;">
-                            <i class="fa-solid fa-oil-well text-gold"
-                                style="font-size: 1.5rem; margin-bottom: 10px;"></i>
-                            <h4 style="color: white;">البترول</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">استثمارات قطاع الطاقة ومعالجة
-                                المشتقات.</p>
-                        </div>
-                    </div>
-
+                    <ul class="feature-list" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
+                            <i class="fa-solid fa-award fa-2x" style="color: var(--accent-gold); margin-top: 5px;"></i>
+                            <div>
+                                <h4 style="color: white; font-size: 1.2rem;">التقدير الصناعي</h4>
+                                <p style="color: var(--text-muted);">جوائز متعددة للسلامة والتميز البيئي في عمليات
+                                    التعدين الكندية</p>
+                            </div>
+                        </li>
+                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
+                            <i class="fa-solid fa-leaf fa-2x" style="color: var(--accent-gold); margin-top: 5px;"></i>
+                            <div>
+                                <h4 style="color: white; font-size: 1.2rem;">الإشراف البيئي</h4>
+                                <p style="color: var(--text-muted);">ريادة ممارسات التعدين المستدامة التي تتجاوز
+                                    المعايير التنظيمية الكندية</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-
-                <div>
-                    <h3 style="color: white; font-family: 'Cairo', sans-serif; margin-bottom: 30px; font-size: 1.8rem;">
-                        أسطول الآلات</h3>
-                    <div class="gallery-grid" style="grid-template-columns: 1fr 1fr;">
-                        <div class="gallery-item"><img src="images/canada_machine_1.jpg" alt="Fleet 1"></div>
-                        <div class="gallery-item"><img src="images/canada_machine_2.jpg" alt="Fleet 2"></div>
-                        <div class="gallery-item"><img src="images/canada_machine_3.jpg" alt="Fleet 3"></div>
-                        <div class="gallery-item"><img src="images/canada_machine_4.jpg" alt="Fleet 4"></div>
-                    </div>
-                    <div class="glass-card" style="margin-top: 30px;">
-                        <h4 style="color: white; margin-bottom: 10px;">تكنولوجيا متطورة</h4>
-                        <p style="color: var(--text-muted);">
-                            يمثل أسطولنا قمة تكنولوجيا التعدين. تم تصميم هذه "العمالقة الحمراء" خصيصاً للإنتاج عالي
-                            السعة والمتانة في البيئات الصعبة،
-                            وهي العمود الفقري لعملياتنا الكندية.
-                        </p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -229,7 +390,7 @@
                 style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px;">
                 <div class="footer-brand">
                     <img src="images/logo.png" alt="IGM Logo" style="width: 100px; margin-bottom: 20px;">
-                    <p style="color: var(--text-muted); line-height: 1.8;"> المجموعة الدولية للتعدين والانشاءات والتنمية
+                    <p style="color: var(--text-muted); line-height: 1.8;">المجموعة الدولية للتعدين والإنشاءات والتنمية
                         الزراعية.</p>
                 </div>
                 <div class="footer-links">
@@ -258,4 +419,3 @@
 </body>
 
 </html>
-
