@@ -1060,7 +1060,69 @@ h5 {
     }
 }
 
-/* Mobile Menu Logic handled in Premium section below */
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(5, 5, 16, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s var(--ease-out);
+    z-index: 1000;
+}
+
+.mobile-menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-nav-item {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--text-main);
+    text-decoration: none;
+    display: block;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: color 0.3s;
+}
+
+.mobile-menu-overlay.open .mobile-nav-item {
+    animation: fadeInUp 0.5s forwards;
+}
+
+.mobile-menu-overlay.open .mobile-nav-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.mobile-menu-overlay.open .mobile-nav-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.mobile-menu-overlay.open .mobile-nav-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.mobile-menu-overlay.open .mobile-nav-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.mobile-nav-item:hover {
+    color: var(--accent-gold);
+}
 
 
 @keyframes fadeInUp {
@@ -1320,211 +1382,6 @@ html[dir="rtl"] .footer-links a:hover {
     .footer-brand p,
     .footer-brand img {
         margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-/* Modern Mobile Menu Overlay */
-/* Premium Mobile Menu Overlay */
-.mobile-menu-overlay {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 85%;
-    max-width: 420px;
-    height: 100vh;
-    background: linear-gradient(135deg, #08081a 0%, #030308 50%, #0a0a15 100%);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
-    z-index: 1001;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 50px 30px;
-    box-shadow: -30px 0 80px rgba(0, 0, 0, 0.95);
-    transition: right 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    overflow-y: auto;
-}
-
-/* Elegant gradient overlay effect */
-.mobile-menu-overlay::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
-    animation: rotateGradient 20s linear infinite;
-    pointer-events: none;
-}
-
-@keyframes rotateGradient {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.mobile-menu-overlay.active {
-    right: 0;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-
-/* Dark overlay backdrop */
-.mobile-menu-overlay::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: opacity 0.6s ease;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.mobile-menu-overlay.active::after {
-    opacity: 1;
-}
-
-/* Modern navigation container */
-.mobile-nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    z-index: 2;
-}
-
-/* Individual menu items with luxury styling */
-.mobile-nav-item {
-    position: relative;
-    display: block;
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    color: #e8e8e8;
-    text-decoration: none;
-    padding: 16px 22px;
-    margin: 8px 0;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    opacity: 0;
-    transform: translateX(80px);
-    backdrop-filter: blur(10px);
-    overflow: hidden;
-}
-
-/* Gold accent on hover */
-.mobile-nav-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(180deg, #c5a059, #d4af6a);
-    transform: scaleY(0);
-    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.mobile-nav-item:hover,
-.mobile-nav-item:active {
-    background: rgba(197, 160, 89, 0.12);
-    border-color: rgba(197, 160, 89, 0.4);
-    transform: translateX(10px) translateY(0);
-    box-shadow: 0 8px 32px rgba(197, 160, 89, 0.2);
-    color: #c5a059;
-}
-
-.mobile-nav-item:hover::before {
-    transform: scaleY(1);
-}
-
-.mobile-menu-overlay.active .mobile-nav-item {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Staggered entrance animations */
-.mobile-menu-overlay.active .mobile-nav-item:nth-child(1) {
-    transition-delay: 0.1s;
-}
-
-.mobile-menu-overlay.active .mobile-nav-item:nth-child(2) {
-    transition-delay: 0.15s;
-}
-
-.mobile-menu-overlay.active .mobile-nav-item:nth-child(3) {
-    transition-delay: 0.2s;
-}
-
-.mobile-menu-overlay.active .mobile-nav-item:nth-child(4) {
-    transition-delay: 0.25s;
-}
-
-.mobile-menu-overlay.active .mobile-nav-item:nth-child(5) {
-    transition-delay: 0.3s;
-}
-
-.mobile-menu-overlay.active .mobile-nav-item:nth-child(6) {
-    transition-delay: 0.35s;
-}
-
-.mobile-menu-overlay.active .mobile-nav-item:nth-child(7) {
-    transition-delay: 0.4s;
-}
-
-/* Language switcher styling */
-.mobile-nav-item.lang-switch {
-    margin-top: 30px;
-    font-size: 1.2rem;
-    background: linear-gradient(135deg, rgba(197, 160, 89, 0.15), rgba(197, 160, 89, 0.05));
-    border-color: rgba(197, 160, 89, 0.3);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .mobile-nav-item {
-        font-size: 1.5rem;
-        padding: 18px 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .mobile-nav-item {
-        font-size: 1.3rem;
-        padding: 15px 20px;
-        margin: 6px 0;
-    }
-
-    .mobile-nav-links {
-        padding: 40px 20px;
-    }
-}
-
-.mobile-nav-item:hover {
-    color: #c5a059;
-    /* accent-gold */
-    transform: scale(1.1);
-}
-
-/* Featured Canadian Projects Grid Mobile Fix */
-@media (max-width: 768px) {
-
-    /* Helper to target the 3-column project grid in Canada Page */
-    [style*="grid-template-columns: repeat(3, 1fr)"] {
         grid-template-columns: 1fr !important;
     }
 

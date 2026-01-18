@@ -96,11 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
         menuBtn.addEventListener('click', () => {
             if (!menuOpen) {
                 menuBtn.classList.add('open');
-                mobileMenu.classList.add('active'); // Matches CSS
+                mobileMenu.classList.add('open');
                 menuOpen = true;
             } else {
                 menuBtn.classList.remove('open');
-                mobileMenu.classList.remove('active');
+                mobileMenu.classList.remove('open');
                 menuOpen = false;
             }
         });
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
             menuBtn.classList.remove('open');
-            mobileMenu.classList.remove('active');
+            mobileMenu.classList.remove('open');
             menuOpen = false;
         });
     });
