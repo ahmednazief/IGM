@@ -13,15 +13,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .hero-title-large {
             font-family: 'Cinzel', serif;
-            font-size: 4rem;
-            letter-spacing: 5px;
+            font-size: 4.5rem;
+            letter-spacing: 6px;
             background: var(--gradient-gold);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
+            text-shadow: 0 0 40px rgba(197, 160, 89, 0.3);
         }
 
         .machinery-grid {
@@ -120,12 +133,21 @@
     </nav>
 
     <!-- Parallax Hero -->
-    <header class="parallax-hero" style="background-image: url('images/canada_machinery_1.jpg');">
-        <div class="container" style="text-align: center; position: relative; z-index: 2;">
+    <header class="parallax-hero"
+        style="background-image: url('images/canada_machinery_1.jpg'); background-size: cover; background-position: center; background-attachment: fixed; position: relative; min-height: 100vh;">
+        <!-- Elegant Blur Overlay -->
+        <div
+            style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(5,5,16,0.3) 0%, rgba(5,5,16,0.85) 100%); backdrop-filter: blur(2px); z-index: 1;">
+        </div>
+
+        <div class="container"
+            style="text-align: center; position: relative; z-index: 2; padding: 150px 20px; display: flex; flex-direction: column; justify-content: center; min-height: 100vh;">
             <img src="https://flagcdn.com/w160/ca.png" alt="Canada"
-                style="width: 80px; box-shadow: 0 0 20px rgba(0,0,0,0.5); margin-bottom: 30px;">
-            <h1 class="hero-title-large">IGM Corp<br>Canada</h1>
-            <p style="font-size: 1.2rem; color: #ccc; max-width: 600px; margin: 0 auto; letter-spacing: 2px;">
+                style="width: 100px; box-shadow: 0 0 30px rgba(197,160,89,0.5); margin-bottom: 40px; border-radius: 8px; animation: fadeInUp 0.8s ease; margin-left: auto; margin-right: auto;">
+            <h1 class="hero-title-large" style="animation: fadeInUp 1s ease; margin-bottom: 25px;">IGM Corp<br>Canada
+            </h1>
+            <p
+                style="font-size: 1.3rem; color: #e0e0e0; max-width: 750px; margin: 0 auto; letter-spacing: 3px; font-weight: 300; animation: fadeInUp 1.2s ease;">
                 MINING • PETROLEUM • CONSTRUCTION • INDUSTRIAL EXCELLENCE
             </p>
         </div>

@@ -17,15 +17,28 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .hero-title-large {
             font-family: 'Cinzel', serif;
-            font-size: 4rem;
-            letter-spacing: 5px;
+            font-size: 4.5rem;
+            letter-spacing: 6px;
             background: var(--gradient-gold);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
+            text-shadow: 0 0 40px rgba(197, 160, 89, 0.3);
         }
 
         .stat-grid-premium {
@@ -163,19 +176,27 @@
     </nav>
 
     <!-- Parallax Hero -->
-    <header class="parallax-hero" style="background-image: url('images/owner_office.jpg');">
-        <div class="container" style="text-align: center; position: relative; z-index: 2;">
+    <header class="parallax-hero"
+        style="background-image: url('images/owner_office.jpg'); background-size: cover; background-position: center; background-attachment: fixed; position: relative;">
+        <!-- Elegant Blur Overlay -->
+        <div
+            style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(5,5,16,0.3) 0%, rgba(5,5,16,0.85) 100%); backdrop-filter: blur(2px); z-index: 1;">
+        </div>
+
+        <div class="container" style="text-align: center; position: relative; z-index: 2; padding: 150px 20px;">
             <img src="https://flagcdn.com/w160/us.png" alt="USA"
-                style="width: 80px; box-shadow: 0 0 20px rgba(0,0,0,0.5); margin-bottom: 30px;">
-            <h1 class="hero-title-large">IGM Investments <br>USA LLC</h1>
-            <p style="font-size: 1.2rem; color: #ccc; max-width: 600px; margin: 0 auto; letter-spacing: 2px;">
+                style="width: 100px; box-shadow: 0 0 30px rgba(197,160,89,0.5); margin-bottom: 40px; border-radius: 8px; animation: fadeInUp 0.8s ease;">
+            <h1 class="hero-title-large" style="animation: fadeInUp 1s ease; margin-bottom: 25px;">IGM Investments
+                <br>USA LLC</h1>
+            <p
+                style="font-size: 1.3rem; color: #e0e0e0; max-width: 700px; margin: 0 auto 50px; letter-spacing: 3px; font-weight: 300; animation: fadeInUp 1.2s ease;">
                 CALIFORNIA • REGISTERED ENTITY • STRATEGIC CAPITAL
             </p>
-            <div style="margin-top: 50px;">
+            <div style="animation: fadeInUp 1.4s ease;">
                 <div
-                    style="display: inline-block; border: 1px solid var(--accent-gold); padding: 10px 30px; border-radius: 50px; background: rgba(0,0,0,0.5);">
-                    <i class="fa-solid fa-check-circle" style="color: var(--accent-gold); margin-right: 10px;"></i>
-                    Entity No: 202462612277
+                    style="display: inline-block; border: 2px solid var(--accent-gold); padding: 15px 40px; border-radius: 50px; background: rgba(5,5,16,0.8); backdrop-filter: blur(10px); box-shadow: 0 8px 32px rgba(197,160,89,0.3);">
+                    <i class="fa-solid fa-check-circle" style="color: var(--accent-gold); margin-right: 12px;"></i>
+                    <span style="color: white; font-weight: 600;">Entity No: 202462612277</span>
                 </div>
             </div>
         </div>
