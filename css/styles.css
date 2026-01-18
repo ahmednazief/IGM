@@ -1456,3 +1456,15 @@ html[dir="rtl"] .footer-links a:hover {
         gap: 35px !important;
     }
 }
+
+/* Force Single Column Footer on Mobile - Override Inline Styles */
+@media (max-width: 768px) {
+    footer > div > div[style*='repeat(3'] {
+        display: block !important;
+    }
+    footer > div > div[style*='repeat(3'] > div {
+        width: 100% !important;
+        margin-bottom: 35px !important;
+        text-align: center !important;
+    }
+}
