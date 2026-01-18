@@ -836,9 +836,9 @@ h5 {
 
 .special-dropdown {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 10px);
     left: 50%;
-    transform: translateX(-50%) translateY(20px);
+    transform: translateX(-50%);
     background: rgba(10, 10, 26, 0.95);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(197, 160, 89, 0.3);
@@ -847,15 +847,18 @@ h5 {
     width: 280px;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     z-index: 1000;
+    margin-top: 0;
 }
 
 .special-nav-item:hover .special-dropdown {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(15px);
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(5px);
 }
 
 .dropdown-link {
