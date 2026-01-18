@@ -1464,7 +1464,7 @@ html[dir="rtl"] .footer-links a:hover {
 }
 
 /* Mobile Menu - Safe Visual Polish */
-.mobile-nav-item {
+.mobile-nav-item, .mobile-menu-overlay .lang-switch {
     font-family: 'Playfair Display', serif; /* Premium Heading Font */
     font-size: 2.2rem;
     color: #ffffff;
@@ -1479,24 +1479,33 @@ html[dir="rtl"] .footer-links a:hover {
     letter-spacing: 1px;
 }
 
-.mobile-nav-item:hover,
-.mobile-nav-item:active,
-.mobile-nav-item.active {
+.mobile-nav-item:hover, .mobile-menu-overlay .lang-switch:hover,
+.mobile-nav-item:active, .mobile-menu-overlay .lang-switch:active,
+.mobile-nav-item.active, .mobile-menu-overlay .lang-switch.active {
     color: #C5A059; /* Gold accent */
     transform: scale(1.05); /* Subtle scale on interaction only */
 }
 
 /* Ensure overlay open state doesn't hide anything */
-.mobile-menu-overlay.open .mobile-nav-item {
+.mobile-menu-overlay.open .mobile-nav-item, .mobile-menu-overlay .lang-switch {
     opacity: 1;
     visibility: visible;
     animation: none; /* Explicitly disable entrance animations */
 }
 
 /* Arabic Mobile Menu Overrides */
-html[dir="rtl"] .mobile-nav-item {
+html[dir="rtl"] .mobile-nav-item, .mobile-menu-overlay .lang-switch {
     font-family: 'Cairo', sans-serif !important;
     font-weight: 700 !important; /* Bold for legibility on blur */
     letter-spacing: 0 !important; /* Arabic requires connected letters */
     font-size: 2rem !important;
+}
+
+/* Fix Header Overlap on Global Branches Mobile */
+@media (max-width: 768px) {
+    .branch-hero {
+        padding-top: 120px !important;
+        height: auto !important; /* Allow it to grow if needed */
+        min-height: 70vh;
+    }
 }
