@@ -4,89 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IGM INVESTMENTS USA LLC | International Group</title>
+    <!-- Premium Meta -->
+    <title>IGM USA | Premium Investment Management</title>
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Cinzel:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .project-hero {
-            height: 60vh;
-            background: linear-gradient(rgba(5, 5, 16, 0.7), rgba(5, 5, 16, 0.9)), url('images/owner_office.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin-top: 80px;
-        }
-
-        .hero-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .flag-icon {
-            width: 60px;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .detail-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 80px;
-            align-items: start;
-        }
-
-        .info-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-        }
-
-        .info-label {
-            color: var(--accent-gold);
-            font-size: 0.9rem;
+        .hero-title-large {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            letter-spacing: 5px;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-            margin-bottom: 5px;
         }
 
-        .info-value {
-            color: #fff;
-            font-size: 1.1rem;
-            font-weight: 500;
+        .stat-grid-premium {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .stat-card-premium {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .stat-val {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            font-family: 'Cinzel', serif;
+        }
+
+        .feature-list li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-list i {
+            color: var(--accent-gold);
+            margin-top: 5px;
         }
 
         @media (max-width: 768px) {
-            .detail-grid {
-                grid-template-columns: 1fr;
+            .hero-title-large {
+                font-size: 2.5rem;
+                letter-spacing: 2px;
             }
 
-            .hero-title {
-                flex-direction: column;
+            .stat-grid-premium {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 
-<body>
+<body class="premium-body">
     <div class="cursor-follower"></div>
 
     <!-- Navigation -->
@@ -98,10 +85,28 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-item">Home</a></li>
                 <li><a href="subsidiaries.html" class="nav-item active">Our Group</a></li>
-                <li><a href="services.html" class="nav-item">Services</a></li>
-                <li><a href="investments.html" class="nav-item">Investments Abroad</a></li>
-                <li><a href="portfolio.html" class="nav-item">Portfolio</a></li>
-                <!-- Back to Home -->
+                <!-- Special Dropdown -->
+                <li class="special-nav-item">
+                    <a href="subsidiaries.html" class="nav-item special-nav-btn">
+                        <i class="fa-solid fa-globe"></i> Global Branches
+                    </a>
+                    <div class="special-dropdown">
+                        <a href="igm-usa.html" class="dropdown-link">
+                            <img src="https://flagcdn.com/w40/us.png" alt="USA" class="dropdown-flag">
+                            <div class="dropdown-text">
+                                <span>IGM Investments USA</span>
+                                <small>USA LLC</small>
+                            </div>
+                        </a>
+                        <a href="igm-canada.html" class="dropdown-link">
+                            <img src="https://flagcdn.com/w40/ca.png" alt="Canada" class="dropdown-flag">
+                            <div class="dropdown-text">
+                                <span>IGM Corp Canada</span>
+                                <small>Corporation</small>
+                            </div>
+                        </a>
+                    </div>
+                </li>
                 <li><a href="igm-usa-ar.html" class="lang-switch" style="font-family: 'Cairo', sans-serif;">العربية</a>
                 </li>
             </ul>
@@ -119,101 +124,104 @@
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="project-hero">
-        <div class="container">
-            <h1 class="hero-title">
-                <img src="https://flagcdn.com/w160/us.png" alt="USA Flag" class="flag-icon">
-                <span>IGM INVESTMENTS <span class="text-gold">USA LLC</span></span>
-            </h1>
-            <p class="hero-subtitle">Officially Registered & Accredited in California</p>
+    <!-- Parallax Hero -->
+    <header class="parallax-hero" style="background-image: url('images/owner_office.jpg');">
+        <div class="container" style="text-align: center; position: relative; z-index: 2;">
+            <img src="https://flagcdn.com/w160/us.png" alt="USA"
+                style="width: 80px; box-shadow: 0 0 20px rgba(0,0,0,0.5); margin-bottom: 30px;">
+            <h1 class="hero-title-large">IGM Investments <br>USA LLC</h1>
+            <p style="font-size: 1.2rem; color: #ccc; max-width: 600px; margin: 0 auto; letter-spacing: 2px;">
+                CALIFORNIA • REGISTERED ENTITY • STRATEGIC CAPITAL
+            </p>
+            <div style="margin-top: 50px;">
+                <div
+                    style="display: inline-block; border: 1px solid var(--accent-gold); padding: 10px 30px; border-radius: 50px; background: rgba(0,0,0,0.5);">
+                    <i class="fa-solid fa-check-circle" style="color: var(--accent-gold); margin-right: 10px;"></i>
+                    Entity No: 202462612277
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <section class="project-content section">
+    <!-- Content Section -->
+    <section class="section-premium">
         <div class="container">
-
             <div class="detail-grid">
-                <!-- Text Content -->
+
                 <div class="detail-text">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Corporate <span class="text-gold">Profile</span>
-                    </h2>
+                    <h2 class="section-title">Strategic <span class="gold-gradient-text">Expansion</span></h2>
+                    <p class="lead-text" style="color: #ccc; font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px;">
+                        Established in Pasadena, California, IGM INVESTMENTS USA LLC represents our commitment to global
+                        economic integration.
+                        As a fully registered Limited Liability Company (June 11, 2024), we leverage the robust American
+                        financial ecosystem to identify
+                        and secure high-yield assets.
+                    </p>
 
-                    <div class="info-card">
-                        <i class="fa-solid fa-building-columns"
-                            style="color: var(--accent-gold); font-size: 2rem; margin-bottom: 15px;"></i>
-                        <h3 style="margin-bottom: 20px; font-size: 1.5rem;">Legal Entity Status</h3>
-
-                        <div style="margin-bottom: 20px;">
-                            <span class="info-label">Company Name</span>
-                            <span class="info-value">IGM INVESTMENTS USA LLC</span>
-                        </div>
-
-                        <div style="margin-bottom: 20px;">
-                            <span class="info-label">Entity Type</span>
-                            <span class="info-value">Limited Liability Company (LLC)</span>
-                        </div>
-
-                        <div style="margin-bottom: 20px;">
-                            <span class="info-label">Registration Jurisdiction</span>
-                            <span class="info-value">State of California, USA</span>
-                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px;">
-                                <i class="fa-solid fa-circle-check" style="color: var(--accent-gold);"></i>
-                                Approved by California Secretary of State
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="info-card">
-                        <h3 style="margin-bottom: 20px; font-size: 1.5rem;">Registration Details</h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <ul class="feature-list" style="list-style: none;">
+                        <li>
+                            <i class="fa-solid fa-chart-line fa-2x"></i>
                             <div>
-                                <span class="info-label">Entity Number</span>
-                                <span class="info-value">202462612277</span>
+                                <h4 style="color: white; font-size: 1.2rem;">Asset Management</h4>
+                                <p style="color: var(--text-muted);">Curating a diversified portfolio including real
+                                    estate, technology equities, and industrial bonds.</p>
                             </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-handshake fa-2x"></i>
                             <div>
-                                <span class="info-label">Registration Date</span>
-                                <span class="info-value">June 11, 2024</span>
+                                <h4 style="color: white; font-size: 1.2rem;">Strategic Partnerships</h4>
+                                <p style="color: var(--text-muted);">Collaborating with US-based firms to facilitate
+                                    cross-border trade and technology transfer to our MENA operations.</p>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="info-card">
-                        <span class="info-label">Registered Address</span>
-                        <span class="info-value">2176 E. Villa Street, Pasadena, CA 91107, USA</span>
-                    </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-shield-halved fa-2x"></i>
+                            <div>
+                                <h4 style="color: white; font-size: 1.2rem;">Regulatory Compliance</h4>
+                                <p style="color: var(--text-muted);">Approved by the California Secretary of State,
+                                    maintaining the highest standards of corporate governance.</p>
+                            </div>
+                        </li>
+                    </ul>
 
                 </div>
 
-                <!-- Image/Visuals -->
-                <div class="detail-image">
-                    <!-- Using a placeholder office image or generic investment image since user said "add from your side" -->
-                    <!-- I'll use a placeholder from unsplash source if needed or existing images. I'll reuse 'images/owner_office.jpg' but styled differently or another one if I had one. 
-                          Since I don't have new generics, I will use a solid color block or re-use existing generic asset or just text. 
-                          Actually I will simply use the owner_office.jpg again but maybe different crop or I can use a color overlay.
-                          Wait, let's look at available images in the file list from earlier.
-                          I see 'images/owner_office.jpg'. I'll use that for now.
-                     -->
-                    <img src="images/owner_office.jpg" alt="IGM USA Office"
-                        style="width: 100%; border-radius: 10px; margin-bottom: 30px;">
+                <div class="glass-card">
+                    <h3 style="color: white; font-family: 'Cinzel', serif; margin-bottom: 30px; font-size: 1.8rem;">
+                        Registration Details</h3>
 
-                    <div class="info-card">
-                        <h3 style="margin-bottom: 20px; font-size: 1.5rem;">Scope of Activity</h3>
-                        <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
-                            <strong>Investments</strong>
-                        </p>
-                        <p style="color: var(--text-muted); line-height: 1.6;">
-                            IGM INVESTMENTS USA LLC operates as the strategic investment arm of the group in the United
-                            States.
-                            Leveraging the strong economic framework of California, the company identifies and manages
-                            high-value investment opportunities
-                            across various sectors including real estate, technology, and industrial development.
-                        </p>
+                    <div
+                        style="margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                        <span
+                            style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">Legal
+                            Name</span>
+                        <span style="color: white; font-size: 1.2rem;">IGM INVESTMENTS USA LLC</span>
+                    </div>
+
+                    <div
+                        style="margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                        <span
+                            style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">Headquarters</span>
+                        <span style="color: white; font-size: 1.1rem;">2176 E. Villa Street<br>Pasadena, CA 91107,
+                            USA</span>
+                    </div>
+
+                    <div class="stat-grid-premium" style="margin-top: 0; grid-template-columns: 1fr 1fr;">
+                        <div>
+                            <span
+                                style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">Status</span>
+                            <span style="color: white; font-weight: 700;">Active</span>
+                        </div>
+                        <div>
+                            <span
+                                style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">Formed</span>
+                            <span style="color: white; font-weight: 700;">2024</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
-
         </div>
     </section>
 

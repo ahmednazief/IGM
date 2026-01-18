@@ -799,6 +799,195 @@ h5 {
     box-shadow: none;
 }
 
+/* =========================================
+   PREMIUM ENHANCEMENTS for USA & Canada Pages
+   ========================================= */
+
+/* Special Navigation Button */
+.special-nav-btn {
+    position: relative;
+    padding: 8px 20px;
+    background: var(--gradient-gold);
+    border-radius: 25px;
+    color: #050510 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.special-nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(197, 160, 89, 0.6);
+}
+
+.special-nav-btn i {
+    font-size: 0.9rem;
+}
+
+/* Dropdown Menu */
+.special-nav-item {
+    position: relative;
+}
+
+.special-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(10, 10, 26, 0.95);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    border-radius: 12px;
+    padding: 15px;
+    width: 280px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.special-nav-item:hover .special-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(15px);
+}
+
+.dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-link:last-child {
+    border-bottom: none;
+}
+
+.dropdown-link:hover {
+    background: rgba(197, 160, 89, 0.15);
+}
+
+.dropdown-flag {
+    width: 30px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-text span {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+}
+
+.dropdown-text small {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Premium Page Layouts */
+.premium-body {
+    background-color: #020205;
+    /* Blacker background */
+}
+
+.parallax-hero {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.parallax-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, #020205 100%);
+}
+
+.premium-title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-gold);
+}
+
+.gold-gradient-text {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section-premium {
+    padding: 120px 0;
+}
+
+@media (max-width: 768px) {
+    .special-dropdown {
+        position: static;
+        transform: none;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 10px 0;
+        display: none;
+        /* Hide by default on mobile, show via JS if needed or CSS hover won't work well */
+    }
+
+    /* For mobile menu integration, we might just list them */
+    .premium-title {
+        font-size: 3rem;
+    }
+}
+
 .menu-btn.open .menu-btn__burger::before {
     transform: rotate(45deg) translate(35px, -35px);
 }
