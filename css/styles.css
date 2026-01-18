@@ -1108,10 +1108,8 @@ h5 {
     -webkit-transition: all 0.5s var(--ease-out);
     transition: all 0.5s var(--ease-out);
     z-index: 2000;
-    overflow-y: auto;
     /* Enable vertical scrolling */
-    padding: 80px 0 40px;
-    /* Top padding for close button, bottom for safe area */
+    padding: 60px 0 20px;
 }
 
 .mobile-menu-overlay.open {
@@ -1131,18 +1129,16 @@ body.menu-open {
 .mobile-nav-links {
     list-style: none;
     text-align: center;
-    padding: 0 20px;
-    margin: auto 0;
-    /* Center vertically if space allows, scroll if not */
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    /* Distribute items evenly */
     align-items: center;
-    gap: calc(2vh + 20px);
-    /* Responsive gap */
     width: 100%;
-    min-height: min-content;
-    /* Allow it to shrink/grow */
+    height: 100%;
+    /* Fill the container */
 }
 
 
@@ -1257,9 +1253,7 @@ html[dir="rtl"] .nav-links {
     flex-direction: row-reverse;
 }
 
-html[dir="rtl"] .menu-btn {
-    /* margin-right rule removed */
-}
+
 
 
 html[dir="rtl"] .contact-item {
@@ -1496,7 +1490,8 @@ html[dir="rtl"] .footer-links a:hover {
 .mobile-menu-overlay .lang-switch {
     font-family: 'Playfair Display', serif;
     /* Premium Heading Font */
-    font-size: 2.2rem;
+    font-size: min(4vh, 2.2rem);
+    /* Dynamic size capped at original */
     color: #ffffff;
     text-decoration: none;
     display: block;
@@ -1556,7 +1551,7 @@ html[dir="rtl"] .mobile-nav-item,
     /* Bold for legibility on blur */
     letter-spacing: 0 !important;
     /* Arabic requires connected letters */
-    font-size: 2rem !important;
+    font-size: min(4vh, 2rem) !important;
 }
 
 /* Fix Header Overlap on Global Branches Mobile */
@@ -1584,4 +1579,19 @@ html[dir="rtl"] .mobile-nav-item,
     html[dir="rtl"] .mobile-nav-item {
         font-size: 1.6rem !important;
     }
+}
+
+/* Page Hero - Centralized Style */
+.page-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 150px;
+    /* Increased to prevent fixed header overlap */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 50vh;
+    /* Default height */
 }
