@@ -1431,3 +1431,28 @@ html[dir="rtl"] .footer-links a:hover {
         margin-bottom: 20px;
     }
 }
+
+/* Additional Footer Mobile Improvements */
+@media (max-width: 768px) {
+    footer {
+        padding: 50px 20px 25px !important;
+    }
+    footer h3 {
+        font-size: 1.4rem !important;
+    }
+    footer h4 {
+        font-size: 1rem !important;
+        margin-bottom: 20px !important;
+    }
+    footer p {
+        font-size: 0.95rem !important;
+    }
+    footer img[alt='IGM Logo'] {
+        width: 90px !important;
+    }
+    footer [style*='grid-template-columns: repeat(3, 1fr)'] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 35px !important;
+    }
+}
