@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IGM Canada | Mining & Industrial Operations</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -69,13 +70,20 @@
             transform: scale(1.1);
         }
 
+        .stat-grid-premium {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
         @media (max-width: 768px) {
             .hero-title-large {
                 font-size: 2.5rem;
                 letter-spacing: 2px;
             }
 
-            .machinery-grid {
+            .machinery-grid,
+            .stat-grid-premium {
                 grid-template-columns: 1fr;
             }
         }
@@ -93,7 +101,13 @@
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-item">Home</a></li>
-                <li><a href="subsidiaries.html" class="nav-item active">Our Group</a></li>
+                <li><a href="subsidiaries.html" class="nav-item">Our Group</a></li>
+                <li><a href="services.html" class="nav-item">Services</a></li>
+                <li><a href="investments.html" class="nav-item">Investments Abroad</a></li>
+                <li><a href="portfolio.html" class="nav-item">Portfolio</a></li>
+                <li><a href="index.html#contact" class="nav-item">Contact</a></li>
+
+                <!-- Special Dropdown -->
                 <li class="special-nav-item">
                     <a href="global-branches.html" class="nav-item special-nav-btn">
                         <i class="fa-solid fa-globe"></i> Global Branches
@@ -115,6 +129,7 @@
                         </a>
                     </div>
                 </li>
+
                 <li><a href="igm-canada-ar.html" class="lang-switch"
                         style="font-family: 'Cairo', sans-serif;">العربية</a></li>
             </ul>
@@ -125,8 +140,12 @@
         <div class="mobile-menu-overlay">
             <ul class="mobile-nav-links">
                 <li><a href="index.html" class="mobile-nav-item">Home</a></li>
-                <li><a href="subsidiaries.html" class="mobile-nav-item active">Our Group</a></li>
-                <li><a href="igm-canada-ar.html" class="lang-switch"
+                <li><a href="subsidiaries.html" class="mobile-nav-item">Our Group</a></li>
+                <li><a href="services.html" class="mobile-nav-item">Services</a></li>
+                <li><a href="investments.html" class="mobile-nav-item">Investments Abroad</a></li>
+                <li><a href="portfolio.html" class="mobile-nav-item">Portfolio</a></li>
+                <li><a href="index.html#contact" class="mobile-nav-item">Contact</a></li>
+                <li><a href="igm-canada-ar.html" class="mobile-nav-item"
                         style="font-family: 'Cairo', sans-serif;">العربية</a></li>
             </ul>
         </div>
@@ -166,7 +185,7 @@
             </div>
 
             <!-- Stats Grid -->
-            <div class="stat-grid-premium" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div class="stat-grid-premium">
                 <div class="stat-card-premium"
                     style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 160, 89, 0.2); padding: 30px; text-align: center; border-radius: 12px;">
                     <div class="stat-val"
@@ -528,10 +547,9 @@
     </section>
 
     <!-- Footer -->
-    <footer style="background: #02020a; border-top: 1px solid rgba(255,255,255,0.05); padding: 80px 0 30px;">
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-grid"
-                style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px;">
+            <div class="footer-grid" class="footer-grid">
                 <div class="footer-brand">
                     <img src="images/logo.png" alt="IGM Logo" style="width: 100px; margin-bottom: 20px;">
                     <p style="color: var(--text-muted); line-height: 1.8;">International Group for Mining, Construction,
@@ -547,11 +565,10 @@
                 </div>
                 <div class="footer-contact">
                     <h4 style="color: white; margin-bottom: 25px;">Contact</h4>
-                    <p style="color: var(--text-muted);">Tower D, Ammar Plaza Towers, Nasr City, Cairo, Egypt</p>
+                    <p style="color: var(--text-muted);">5 Tower D, Ammar Plaza Towers, Nasr City, Cairo, Egypt</p>
                 </div>
             </div>
-            <div class="footer-bottom"
-                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; text-align: center;">
+            <div class="footer-bottom" class="footer-bottom">
                 <p style="color: var(--text-muted);">&copy; 2026 IGM. All Rights Reserved.</p>
             </div>
         </div>

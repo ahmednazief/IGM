@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Branches | IGM International Operations</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -126,7 +127,7 @@
 
         .branch-subtitle {
             color: var(--accent-gold);
-            fontsize: 1.3rem;
+            font-size: 1.3rem;
             margin-bottom: 25px;
             font-weight: 600;
             letter-spacing: 2px;
@@ -157,16 +158,34 @@
             .global-title {
                 font-size: 2.5rem;
                 letter-spacing: 3px;
+                margin-top: 20px;
             }
 
             .branch-item {
                 grid-template-columns: 1fr;
-                padding: 40px;
-                gap: 30px;
+                padding: 30px 20px;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .branch-item>div:first-child {
+                order: 1;
+                /* Ensure flag/title comes first/top on mobile if needed, or default is fine */
             }
 
             .branch-title {
                 font-size: 2rem;
+            }
+
+            .branch-flag {
+                width: 150px;
+                /* Smaller flag on mobile */
+            }
+
+            h3 {
+                font-size: 1.8rem !important;
+                /* Force smaller heading for "IGM Investments USA LLC" */
+                word-wrap: break-word;
             }
         }
     </style>
@@ -187,7 +206,7 @@
                 <li><a href="services.html" class="nav-item">Services</a></li>
                 <li><a href="investments.html" class="nav-item">Investments Abroad</a></li>
                 <li><a href="portfolio.html" class="nav-item">Portfolio</a></li>
-                <li><a href="#contact" class="nav-item">Contact</a></li>
+                <li><a href="index.html#contact" class="nav-item">Contact</a></li>
 
                 <!-- Special Dropdown -->
                 <li class="special-nav-item">
@@ -226,7 +245,7 @@
                 <li><a href="services.html" class="mobile-nav-item">Services</a></li>
                 <li><a href="investments.html" class="mobile-nav-item">Investments Abroad</a></li>
                 <li><a href="portfolio.html" class="mobile-nav-item">Portfolio</a></li>
-                <li><a href="#contact" class="mobile-nav-item">Contact</a></li>
+                <li><a href="index.html#contact" class="mobile-nav-item">Contact</a></li>
                 <li><a href="global-branches-ar.html" class="lang-switch"
                         style="font-family: 'Cairo', sans-serif;">العربية</a></li>
             </ul>
@@ -344,10 +363,9 @@
     </section>
 
     <!-- Footer -->
-    <footer style="background: #02020a; border-top: 1px solid rgba(255,255,255,0.05); padding: 80px 0 30px;">
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-grid"
-                style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px;">
+            <div class="footer-grid" class="footer-grid">
                 <div class="footer-brand">
                     <img src="images/logo.png" alt="IGM Logo" style="width: 100px; margin-bottom: 20px;">
                     <p style="color: var(--text-muted); line-height: 1.8;">International Group for Mining, Construction,
@@ -363,11 +381,10 @@
                 </div>
                 <div class="footer-contact">
                     <h4 style="color: white; margin-bottom: 25px;">Contact</h4>
-                    <p style="color: var(--text-muted);">Tower D, Ammar Plaza Towers, Nasr City, Cairo, Egypt</p>
+                    <p style="color: var(--text-muted);">5 Tower D, Ammar Plaza Towers, Nasr City, Cairo, Egypt</p>
                 </div>
             </div>
-            <div class="footer-bottom"
-                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; text-align: center;">
+            <div class="footer-bottom" class="footer-bottom">
                 <p style="color: var(--text-muted);">&copy; 2026 IGM. All Rights Reserved.</p>
             </div>
         </div>
