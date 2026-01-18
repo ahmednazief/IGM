@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروعنا العالمية | IGM العمليات الدولية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .branch-hero {
+            height: 70vh;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #050510 70%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .branch-hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(197, 160, 89, 0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        .global-title {
+            font-family: 'Cairo', sans-serif;
+            font-size: 5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .branch-showcase {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .branch-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(197, 160, 89, 0.05), rgba(10, 10, 26, 0.8));
+            border: 2px solid rgba(197, 160, 89, 0.3);
+            border-radius: 30px;
+            padding: 60px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .branch-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.1), transparent);
+            transition: right 0.8s ease;
+        }
+
+        .branch-item:hover::before {
+            right: 100%;
+        }
+
+        .branch-item:hover {
+            transform: translateY(-15px);
+            border-color: rgba(197, 160, 89, 0.6);
+            box-shadow: 0 20px 60px rgba(197, 160, 89, 0.3);
+        }
+
+        .branch-flag {
+            width: 200px;
+            height: auto;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            transition: transform 0.5s ease;
+        }
+
+        .branch-item:hover .branch-flag {
+            transform: scale(1.1) translateY(-10px);
+        }
+
+        .branch-title {
+            font-family: 'Cairo', sans-serif;
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .branch-subtitle {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .branch-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 40px;
+            background: var(--gradient-gold);
+            color: #050510;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+        }
+
+        .branch-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(197, 160, 89, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .global-title {
+                font-size: 2.5rem;
+                letter-spacing: 1px;
+            }
+
+            .branch-item {
+                grid-template-columns: 1fr;
+                padding: 40px;
+                gap: 30px;
+            }
+
+            .branch-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" dir="rtl">
+        <div class="container nav-content">
+            <a href="ar.html" class="logo">
+                <img src="images/logo.png" alt="IGM Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="ar.html" class="nav-item">الرئيسية</a></li>
+                <li><a href="subsidiaries-ar.html" class="nav-item">مجموعتنا</a></li>
+                <li><a href="services-ar.html" class="nav-item">الخدمات</a></li>
+                <li><a href="investments-ar.html" class="nav-item">الاستثمارات الخارجية</a></li>
+                <li><a href="portfolio-ar.html" class="nav-item">المشاريع</a></li>
+                <li><a href="ar.html#contact" class="nav-item">تواصل معنا</a></li>
+
+                <li class="special-nav-item">
+                    <a href="global-branches-ar.html" class="nav-item special-nav-btn">
+                        <i class="fa-solid fa-globe"></i> فروعنا العالمية
+                    </a>
+                    <div class="special-dropdown">
+                        <a href="igm-usa-ar.html" class="dropdown-link"
+                            style="text-align: right; justify-content: flex-start;">
+                            <img src="https://flagcdn.com/w40/us.png" alt="USA" class="dropdown-flag">
+                            <div class="dropdown-text">
+                                <span>IGM Investments USA</span>
+                                <small>USA LLC</small>
+                            </div>
+                        </a>
+                        <a href="igm-canada-ar.html" class="dropdown-link"
+                            style="text-align: right; justify-content: flex-start;">
+                            <img src="https://flagcdn.com/w40/ca.png" alt="Canada" class="dropdown-flag">
+                            <div class="dropdown-text">
+                                <span>IGM Corp Canada</span>
+                                <small>Corporation</small>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li><a href="global-branches.html" class="lang-switch"
+                        style="font-family: 'Outfit', sans-serif;">English</a></li>
+            </ul>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
+        <div class="mobile-menu-overlay">
+            <ul class="mobile-nav-links">
+                <li><a href="ar.html" class="mobile-nav-item">الرئيسية</a></li>
+                <li><a href="subsidiaries-ar.html" class="mobile-nav-item">مجموعتنا</a></li>
+                <li><a href="services-ar.html" class="mobile-nav-item">الخدمات</a></li>
+                <li><a href="investments-ar.html" class="mobile-nav-item">الاستثمارات الخارجية</a></li>
+                <li><a href="portfolio-ar.html" class="mobile-nav-item">المشاريع</a></li>
+                <li><a href="ar.html#contact" class="mobile-nav-item">تواصل معنا</a></li>
+                <li><a href="global-branches.html" class="lang-switch"
+                        style="font-family: 'Outfit', sans-serif;">English</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="branch-hero">
+        <div class="container" style="position: relative; z-index: 2;">
+            <i class="fa-solid fa-earth-americas"
+                style="font-size: 5rem; color: var(--accent-gold); margin-bottom: 30px;"></i>
+            <h1 class="global-title">فروعنا<br>العالمية</h1>
+            <p style="font-size: 1.5rem; color: #ccc; max-width: 700px; margin: 0 auto; line-height: 1.8;">
+                توسيع إرثنا عبر القارات من خلال العمليات الدولية الاستراتيجية في أمريكا الشمالية
+            </p>
+        </div>
+    </header>
+
+    <!-- Branches Showcase -->
+    <section class="section" style="padding: 120px 0; background: #050510;">
+        <div class="container">
+            <div class="branch-showcase">
+
+                <!-- USA Branch -->
+                <div class="branch-item">
+                    <div style="text-align: center;">
+                        <img src="https://flagcdn.com/w320/us.png" alt="United States Flag" class="branch-flag">
+                        <h2 class="branch-title">الولايات المتحدة</h2>
+                        <p class="branch-subtitle">كاليفورنيا</p>
+                        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px;">
+                            مسجلة في باسادينا، كاليفورنيا
+                        </p>
+                    </div>
+                    <div>
+                        <h3
+                            style="color: white; font-size: 2.5rem; margin-bottom: 20px; font-family: 'Cairo', sans-serif; font-weight: 700;">
+                            IGM Investments USA LLC</h3>
+                        <p style="color: #ccc; line-height: 1.9; font-size: 1.1rem; margin-bottom: 30px;">
+                            تركز عملياتنا في الولايات المتحدة على التوظيف الاستراتيجي لرأس المال عبر العقارات والمشاريع
+                            التكنولوجية والأسواق المالية. من خلال الاستفادة من اقتصاد أمريكا القوي، نحدد فرص الاستثمار
+                            ذات العائد المرتفع مع تسهيل الشراكات العابرة للحدود.
+                        </p>
+
+                        <div
+                            style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px;">
+                            <div
+                                style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4 style="color: var(--accent-gold); margin-bottom: 10px;">+$50M</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">الأصول المُدارة</p>
+                            </div>
+                            <div
+                                style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4 style="color: var(--accent-gold); margin-bottom: 10px;">+15</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">شركات المحفظة</p>
+                            </div>
+                        </div>
+
+                        <a href="igm-usa-ar.html" class="branch-btn">
+                            استكشف عمليات الولايات المتحدة <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Canada Branch -->
+                <div class="branch-item">
+                    <div>
+                        <h3
+                            style="color: white; font-size: 2.5rem; margin-bottom: 20px; font-family: 'Cairo', sans-serif; font-weight: 700;">
+                            IGM Corp Canada</h3>
+                        <p style="color: #ccc; line-height: 1.9; font-size: 1.1rem; margin-bottom: 30px;">
+                            الريادة في عمليات التعدين والبترول والإنشاءات في جميع أنحاء كندا. تأسست الشركة على يد محمود
+                            نظيف، ونتخصص في استخراج المعادن الثمينة وتطوير النفط والغاز والمشاريع الصناعية الثقيلة. يجمع
+                            قسمنا الكندي بين عقود من الخبرة العالمية والتكنولوجيا المتطورة.
+                        </p>
+
+                        <div
+                            style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px;">
+                            <div
+                                style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4 style="color: var(--accent-gold); margin-bottom: 10px;">+20</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">سنة من التميز</p>
+                            </div>
+                            <div
+                                style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4 style="color: var(--accent-gold); margin-bottom: 10px;">+15</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">أسطول المعدات</p>
+                            </div>
+                        </div>
+
+                        <a href="igm-canada-ar.html" class="branch-btn">
+                            استكشف عمليات كندا <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="https://flagcdn.com/w320/ca.png" alt="Canada Flag" class="branch-flag">
+                        <h2 class="branch-title">كندا</h2>
+                        <p class="branch-subtitle">مسجلة فيدراليًا</p>
+                        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px;">
+                            شركة اتحادية
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="padding: 100px 0; background: rgba(197, 160, 89, 0.05);">
+        <div class="container" style="text-align: center;">
+            <h2
+                style="font-size: 3rem; color: white; margin-bottom: 20px; font-family: 'Cairo', sans-serif; font-weight: 700;">
+                توسيع بصمتنا العالمية</h2>
+            <p style="color: #ccc; font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; line-height: 1.8;">
+                تمثل فروعنا الدولية التزام IGM بالنمو العالمي المسؤول، وجلب الخبرة العالمية إلى أسواق جديدة مع الحفاظ
+                على أعلى معايير التميز.
+            </p>
+            <a href="subsidiaries-ar.html" class="btn-primary magnetic-btn">عرض جميع الشركات التابعة</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #02020a; border-top: 1px solid rgba(255,255,255,0.05); padding: 80px 0 30px;" dir="rtl">
+        <div class="container">
+            <div class="footer-grid"
+                style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px;">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="IGM Logo" style="width: 100px; margin-bottom: 20px;">
+                    <p style="color: var(--text-muted); line-height: 1.8;">المجموعة الدولية للتعدين والإنشاءات والتنمية
+                        الزراعية.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 style="color: white; margin-bottom: 25px;">روابط سريعة</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="ar.html" style="color: var(--text-muted); text-decoration: none;">الرئيسية</a></li>
+                        <li><a href="subsidiaries-ar.html"
+                                style="color: var(--text-muted); text-decoration: none;">مجموعتنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 style="color: white; margin-bottom: 25px;">تواصل معنا</h4>
+                    <p style="color: var(--text-muted);">برج D، أبراج عمار بلازا، مدينة نصر، القاهرة، مصر</p>
+                </div>
+            </div>
+            <div class="footer-bottom"
+                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; text-align: center;">
+                <p style="color: var(--text-muted);">&copy; 2026 IGM. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
