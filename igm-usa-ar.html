@@ -4,31 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IGM USA | الاستثمار المتميز</title>
-    <!-- Fonts & Icons -->
+    <title>IGM USA | الاستثمار الاستراتيجي الأمريكي</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Cinzel:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Cinzel:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
             font-family: 'Cairo', sans-serif;
         }
 
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .hero-title-large {
             font-family: 'Cairo', sans-serif;
+            font-size: 4.5rem;
             font-weight: 700;
-            font-size: 4rem;
             letter-spacing: 0;
             background: var(--gradient-gold);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(197, 160, 89, 0.3);
         }
 
         .stat-grid-premium {
@@ -43,20 +53,50 @@
             border: 1px solid rgba(197, 160, 89, 0.2);
             padding: 30px;
             text-align: center;
+            border-radius: 12px;
+            transition: all 0.4s ease;
         }
 
-        .feature-list li {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
+        .stat-card-premium:hover {
+            transform: translateY(-5px);
+            border-color: rgba(197, 160, 89, 0.5);
         }
 
-        .feature-list i {
+        .stat-val {
+            font-size: 2.5rem;
             color: var(--accent-gold);
-            margin-top: 5px;
-            margin-left: 15px;
-            /* RTL fix */
+            font-family: 'Cinzel', serif;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-right: 40px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            right: 5px;
+            top: 17px;
+            width: 2px;
+            height: calc(100% + 20px);
+            background: rgba(197, 160, 89, 0.3);
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
         }
 
         @media (max-width: 768px) {
@@ -83,7 +123,6 @@
             <ul class="nav-links">
                 <li><a href="ar.html" class="nav-item">الرئيسية</a></li>
                 <li><a href="subsidiaries-ar.html" class="nav-item active">مجموعتنا</a></li>
-                <!-- Special Dropdown -->
                 <li class="special-nav-item">
                     <a href="global-branches-ar.html" class="nav-item special-nav-btn">
                         <i class="fa-solid fa-globe"></i> فروعنا العالمية
@@ -91,8 +130,7 @@
                     <div class="special-dropdown">
                         <a href="igm-usa-ar.html" class="dropdown-link"
                             style="text-align: right; justify-content: flex-start;">
-                            <img src="https://flagcdn.com/w40/us.png" alt="USA" class="dropdown-flag"
-                                style="margin-left: 10px;">
+                            <img src="https://flagcdn.com/w40/us.png" alt="USA" class="dropdown-flag">
                             <div class="dropdown-text">
                                 <span>IGM Investments USA</span>
                                 <small>USA LLC</small>
@@ -100,8 +138,7 @@
                         </a>
                         <a href="igm-canada-ar.html" class="dropdown-link"
                             style="text-align: right; justify-content: flex-start;">
-                            <img src="https://flagcdn.com/w40/ca.png" alt="Canada" class="dropdown-flag"
-                                style="margin-left: 10px;">
+                            <img src="https://flagcdn.com/w40/ca.png" alt="Canada" class="dropdown-flag">
                             <div class="dropdown-text">
                                 <span>IGM Corp Canada</span>
                                 <small>Corporation</small>
@@ -137,8 +174,7 @@
         <div class="container" style="text-align: center; position: relative; z-index: 2; padding: 150px 20px;">
             <img src="https://flagcdn.com/w160/us.png" alt="USA"
                 style="width: 100px; box-shadow: 0 0 30px rgba(197,160,89,0.5); margin-bottom: 40px; border-radius: 8px;">
-            <h1 class="hero-title-large" style="font-size: 4.5rem; margin-bottom: 25px;">IGM Investments <br>USA LLC
-            </h1>
+            <h1 class="hero-title-large" style="margin-bottom: 25px;">IGM Investments <br>USA LLC</h1>
             <p
                 style="font-size: 1.3rem; color: #e0e0e0; max-width: 700px; margin: 0 auto 50px; letter-spacing: 2px; font-weight: 300;">
                 كاليفورنيا • كيان مسجل • رأس مال استراتيجي
@@ -147,58 +183,210 @@
                 <div
                     style="display: inline-block; border: 2px solid var(--accent-gold); padding: 15px 40px; border-radius: 50px; background: rgba(5,5,16,0.8); backdrop-filter: blur(10px); box-shadow: 0 8px 32px rgba(197,160,89,0.3);">
                     <i class="fa-solid fa-check-circle" style="color: var(--accent-gold); margin-left: 12px;"></i>
-                    <span style="color: white; font-weight: 600;">رقم التسجيل: 202462612277</span>
+                    <span style="color: white; font-weight: 600;">رقم الكيان: 202462612277</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Content Section -->
+    <!-- Mission Section -->
+    <section class="section-premium" style="padding: 80px 0;">
+        <div class="container">
+            <div style="text-align: center; max-width: 900px; margin: 0 auto 80px;">
+                <h2 class="section-title">مهمتنا <span class="gold-gradient-text">في أمريكا</span></h2>
+                <p style="color: #ccc; font-size: 1.3rem; line-height: 1.9; margin-top: 30px;">
+                    تعمل IGM Investments USA LLC كبوابتنا الاستراتيجية لأسواق أمريكا الشمالية، مما يمكننا من الاستفادة
+                    من أكبر اقتصاد في العالم مع جلب الخبرة العالمية إلى الولايات المتحدة. نربط القارات من خلال الاستثمار
+                    الذكي، ونعزز الازدهار عبر الحدود.
+                </p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stat-grid-premium">
+                <div class="stat-card-premium">
+                    <div class="stat-val">+$50M</div>
+                    <p style="color: var(--text-muted); margin-top: 15px;">الأصول المُدارة</p>
+                </div>
+                <div class="stat-card-premium">
+                    <div class="stat-val">+15</div>
+                    <p style="color: var(--text-muted); margin-top: 15px;">شركات المحفظة</p>
+                </div>
+                <div class="stat-card-premium">
+                    <div class="stat-val">2024</div>
+                    <p style="color: var(--text-muted); margin-top: 15px;">سنة التأسيس</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Operations -->
+    <section class="section-premium" style="background: rgba(255,255,255,0.02); padding: 100px 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 80px;">العمليات <span
+                    class="gold-gradient-text">الأساسية</span></h2>
+
+            <div class="detail-grid" style="margin-bottom: 40px;">
+                <div class="glass-card" style="padding: 40px;">
+                    <i class="fa-solid fa-building-columns" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                    <h3 style="color: white; margin: 25px 0 20px; font-size: 1.8rem;">الاستثمار العقاري</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                        الاستحواذ وتطوير العقارات التجارية والسكنية عالية القيمة في كاليفورنيا وتكساس وفلوريدا. تركز
+                        محفظتنا على الأسواق الناشئة ذات النمو الديموغرافي القوي.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>التطوير السكني متعدد الأسر
+                        </li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>المساحات المكتبية التجارية
+                        </li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>المستودعات الصناعية</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card" style="padding: 40px;">
+                    <i class="fa-solid fa-microchip" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                    <h3 style="color: white; margin: 25px 0 20px; font-size: 1.8rem;">الاستثمار التكنولوجي</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                        مراكز استثمارية استراتيجية في شركات التكنولوجيا المبتكرة، مع التركيز على الذكاء الاصطناعي
+                        والطاقة النظيفة وحلول برمجيات المؤسسات.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>شركات الذكاء الاصطناعي الناشئة
+                        </li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>تكنولوجيا الطاقة المتجددة</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>حلول التكنولوجيا الزراعية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="detail-grid">
+                <div class="glass-card" style="padding: 40px;">
+                    <i class="fa-solid fa-chart-line" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                    <h3 style="color: white; margin: 25px 0 20px; font-size: 1.8rem;">أسواق رأس المال</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                        المشاركة النشطة في أسواق الأسهم والسندات الأمريكية، والاستفادة من رؤانا العالمية لتحديد الفرص
+                        المقيمة بأقل من قيمتها.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>استثمارات الأسهم العامة</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>سندات الشركات</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>الأوراق المالية الحكومية</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card" style="padding: 40px;">
+                    <i class="fa-solid fa-handshake" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                    <h3 style="color: white; margin: 25px 0 20px; font-size: 1.8rem;">الشراكات الاستراتيجية</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                        تسهيل التعاون عبر الحدود بين الشركات الأمريكية وعملياتنا في الشرق الأوسط وأفريقيا.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>تسهيل الاستيراد والتصدير</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>ترخيص التكنولوجيا</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-left: 10px;"></i>هيكلة المشاريع المشتركة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
     <section class="section-premium">
         <div class="container">
-            <div class="detail-grid">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 80px;">الجدول الزمني <span
+                    class="gold-gradient-text">للنمو</span></h2>
 
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="timeline-item">
+                    <h4 style="color: white; font-size: 1.3rem; margin-bottom: 10px;">يونيو 2024 - التأسيس</h4>
+                    <p style="color: var(--text-muted); line-height: 1.8;">
+                        تم تسجيل IGM Investments USA LLC رسميًا لدى وزير خارجية كاليفورنيا، مما أرسى وجودنا القانوني في
+                        الولايات المتحدة مع المقر الرئيسي في باسادينا، كاليفورنيا.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4 style="color: white; font-size: 1.3rem; margin-bottom: 10px;">الربع الثالث 2024 - الاستثمارات
+                        الأولية</h4>
+                    <p style="color: var(--text-muted); line-height: 1.8;">
+                        تم توظيف رأس مال أولي بقيمة 15 مليون دولار عبر ثلاث عقارات تجارية في جنوب كاليفورنيا واستثمارات
+                        بذرية في شركتين للطاقة النظيفة.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4 style="color: white; font-size: 1.3rem; margin-bottom: 10px;">الربع الرابع 2024 - توسع المحفظة
+                    </h4>
+                    <p style="color: var(--text-muted); line-height: 1.8;">
+                        توسعت قاعدة الأصول إلى 35 مليون دولار من خلال عمليات استحواذ استراتيجية في أسواق تكساس وفلوريدا.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4 style="color: white; font-size: 1.3rem; margin-bottom: 10px;">أهداف 2025</h4>
+                    <p style="color: var(--text-muted); line-height: 1.8;">
+                        النمو المتوقع إلى 100 مليون دولار من الأصول المُدارة من خلال الاستحواذ العقاري المستمر
+                        واستثمارات رأس المال.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Details -->
+    <section class="section-premium" style="background: rgba(255,255,255,0.02); padding: 100px 0;">
+        <div class="container">
+            <div class="detail-grid">
                 <div class="detail-text">
-                    <h2 class="section-title">توسع <span class="gold-gradient-text">استراتيجي</span></h2>
+                    <h2 class="section-title">الإطار <span class="gold-gradient-text">القانوني</span></h2>
                     <p class="lead-text" style="color: #ccc; font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px;">
-                        تأسست IGM INVESTMENTS USA LLC في باسادينا، كاليفورنيا، لتمثل التزامنا بالتكامل الاقتصادي
-                        العالمي.
-                        كشركة ذات مسؤولية محدودة مسجلة بالكامل (11 يونيو 2024)، نستفيد من النظام المالي الأمريكي القوي
-                        لتحديد
-                        وتأمين الأصول ذات العوائد المرتفعة.
+                        عملياتنا متوافقة تمامًا مع اللوائح الفيدرالية ولوائح الولايات، مما يضمن الشفافية والمساءلة وأعلى
+                        معايير حوكمة الشركات.
                     </p>
 
                     <ul class="feature-list" style="list-style: none; padding: 0;">
-                        <li>
-                            <i class="fa-solid fa-chart-line fa-2x"></i>
+                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
+                            <i class="fa-solid fa-shield-halved fa-2x"
+                                style="color: var(--accent-gold); margin-top: 5px;"></i>
                             <div>
-                                <h4 style="color: white; font-size: 1.2rem;">إدارة الأصول</h4>
-                                <p style="color: var(--text-muted);">رعاية محفظة متنوعة تشمل العقارات، أسهم التكنولوجيا،
-                                    والسندات الصناعية.</p>
+                                <h4 style="color: white; font-size: 1.2rem;">الامتثال لهيئة SEC</h4>
+                                <p style="color: var(--text-muted);">الالتزام الكامل بلوائح هيئة الأوراق المالية
+                                    والبورصات.</p>
                             </div>
                         </li>
-                        <li>
-                            <i class="fa-solid fa-handshake fa-2x"></i>
+                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
+                            <i class="fa-solid fa-scale-balanced fa-2x"
+                                style="color: var(--accent-gold); margin-top: 5px;"></i>
                             <div>
-                                <h4 style="color: white; font-size: 1.2rem;">شراكات استراتيجية</h4>
-                                <p style="color: var(--text-muted);">التعاون مع الشركات الأمريكية لتسهيل التجارة عبر
-                                    الحدود ونقل التكنولوجيا إلى عملياتنا في الشرق الأوسط.</p>
+                                <h4 style="color: white; font-size: 1.2rem;">التسجيل الحكومي</h4>
+                                <p style="color: var(--text-muted);">مرخصة ومسجلة لدى وزير خارجية كاليفورنيا.</p>
                             </div>
                         </li>
-                        <li>
-                            <i class="fa-solid fa-shield-halved fa-2x"></i>
+                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
+                            <i class="fa-solid fa-file-contract fa-2x"
+                                style="color: var(--accent-gold); margin-top: 5px;"></i>
                             <div>
-                                <h4 style="color: white; font-size: 1.2rem;">الامتثال التنظيمي</h4>
-                                <p style="color: var(--text-muted);">معتمدة من قبل وزير خارجية ولاية كاليفورنيا، مع
-                                    الحفاظ على أعلى معايير حوكمة الشركات.</p>
+                                <h4 style="color: white; font-size: 1.2rem;">حوكمة الشركات</h4>
+                                <p style="color: var(--text-muted);">مهيكلة بلوائح واضحة وإشراف مستقل.</p>
                             </div>
                         </li>
                     </ul>
-
                 </div>
 
                 <div class="glass-card">
-                    <h3 style="color: white; font-family: 'Cairo', sans-serif; margin-bottom: 30px; font-size: 1.8rem;">
+                    <h3
+                        style="color: white; font-family: 'Cairo', serif; margin-bottom: 30px; font-size: 1.8rem; font-weight: 700;">
                         تفاصيل التسجيل</h3>
 
                     <div
@@ -212,24 +400,38 @@
                     <div
                         style="margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
                         <span
+                            style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">رقم
+                            الكيان</span>
+                        <span style="color: white; font-size: 1.2rem;">202462612277</span>
+                    </div>
+
+                    <div
+                        style="margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                        <span
                             style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">المقر
                             الرئيسي</span>
+                        <span style="color: white; font-size: 1.1rem;">2176 E. Villa Street<br>Pasadena, CA 91107,
+                            USA</span>
+                    </div>
+
+                    <div
+                        style="margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
                         <span
-                            style="color: white; font-size: 1.1rem; direction: ltr; display: block; text-align: right;">2176
-                            E. Villa Street<br>Pasadena, CA 91107, USA</span>
+                            style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">تاريخ
+                            التأسيس</span>
+                        <span style="color: white; font-size: 1.1rem;">11 يونيو 2024</span>
                     </div>
 
                     <div class="stat-grid-premium" style="margin-top: 0; grid-template-columns: 1fr 1fr;">
                         <div>
                             <span
                                 style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">الحالة</span>
-                            <span style="color: white; font-weight: 700;">نشطة (Active)</span>
+                            <span style="color: white; font-weight: 700;">نشط</span>
                         </div>
                         <div>
                             <span
-                                style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">سنة
-                                التأسيس</span>
-                            <span style="color: white; font-weight: 700;">2024</span>
+                                style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">النوع</span>
+                            <span style="color: white; font-weight: 700;">LLC</span>
                         </div>
                     </div>
                 </div>
@@ -245,7 +447,7 @@
                 style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px;">
                 <div class="footer-brand">
                     <img src="images/logo.png" alt="IGM Logo" style="width: 100px; margin-bottom: 20px;">
-                    <p style="color: var(--text-muted); line-height: 1.8;"> المجموعة الدولية للتعدين والانشاءات والتنمية
+                    <p style="color: var(--text-muted); line-height: 1.8;">المجموعة الدولية للتعدين والإنشاءات والتنمية
                         الزراعية.</p>
                 </div>
                 <div class="footer-links">
