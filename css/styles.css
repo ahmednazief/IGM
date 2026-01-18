@@ -820,13 +820,23 @@ h5 {
     gap: 8px;
 }
 
+/* Remove underline on hover */
+.special-nav-btn::after {
+    display: none !important;
+}
+
 .special-nav-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 25px rgba(197, 160, 89, 0.6);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 30px rgba(197, 160, 89, 0.8), 0 5px 15px rgba(197, 160, 89, 0.3);
 }
 
 .special-nav-btn i {
     font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.special-nav-btn:hover i {
+    transform: rotate(180deg);
 }
 
 /* Dropdown Menu */
@@ -834,9 +844,21 @@ h5 {
     position: relative;
 }
 
+/* Invisible bridge to keep dropdown open */
+.special-nav-item::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: transparent;
+    z-index: 999;
+}
+
 .special-dropdown {
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100% + 5px);
     left: 50%;
     transform: translateX(-50%);
     background: rgba(10, 10, 26, 0.95);
@@ -851,14 +873,14 @@ h5 {
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    margin-top: 0;
 }
 
-.special-nav-item:hover .special-dropdown {
+.special-nav-item:hover .special-dropdown,
+.special-dropdown:hover {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translateX(-50%) translateY(5px);
+    transform: translateX(-50%) translateY(0);
 }
 
 .dropdown-link {

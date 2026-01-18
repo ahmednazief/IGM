@@ -40,6 +40,13 @@
             border: 1px solid rgba(197, 160, 89, 0.2);
             padding: 30px;
             text-align: center;
+            border-radius: 12px;
+            transition: all 0.4s ease;
+        }
+
+        .stat-card-premium:hover {
+            transform: translateY(-5px);
+            border-color: rgba(197, 160, 89, 0.5);
         }
 
         .stat-val {
@@ -58,6 +65,37 @@
         .feature-list i {
             color: var(--accent-gold);
             margin-top: 5px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 17px;
+            width: 2px;
+            height: calc(100% + 20px);
+            background: rgba(197, 160, 89, 0.3);
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
         }
 
         @media (max-width: 768px) {
@@ -143,48 +181,209 @@
         </div>
     </header>
 
-    <!-- Content Section -->
+    <!-- Mission Section -->
+    <section class="section-premium" style="padding: 80px 0;">
+        <div class="container">
+            <div style="text-align: center; max-width: 900px; margin: 0 auto 80px;">
+                <h2 class="section-title">Our <span class="gold-gradient-text">Mission in America</span></h2>
+                <p style="color: #ccc; font-size: 1.3rem; line-height: 1.9; margin-top: 30px;">
+                    IGM Investments USA LLC serves as our strategic gateway to North American markets, enabling us to
+                    capitalize on the world's largest economy while bringing global expertise to the United States.
+                    We bridge continents through intelligent investment, fostering prosperity across borders.
+                </p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stat-grid-premium">
+                <div class="stat-card-premium">
+                    <div class="stat-val">$50M+</div>
+                    <p style="color: var(--text-muted); margin-top: 15px;">Assets Under Management</p>
+                </div>
+                <div class="stat-card-premium">
+                    <div class="stat-val">15+</div>
+                    <p style="color: var(--text-muted); margin-top: 15px;">Portfolio Companies</p>
+                </div>
+                <div class="stat-card-premium">
+                    <div class="stat-val">2024</div>
+                    <p style="color: var(--text-muted); margin-top: 15px;">Established</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Operations -->
+    <section class="section-premium" style="background: rgba(255,255,255,0.02); padding: 100px 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 80px;">Core <span
+                    class="gold-gradient-text">Operations</span></h2>
+
+            <div class="detail-grid">
+                <div class="glass-card" style="padding: 40px;">
+                    <i class="fa-solid fa-building-columns" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                    <h3 style="color: white; margin: 25px 0 20px; font-size: 1.8rem;">Real Estate Investment</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                        Acquiring and developing high-value commercial and residential properties across California,
+                        Texas, and Florida. Our portfolio focuses on emerging markets with strong demographic growth
+                        and economic fundamentals.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-right: 10px;"></i>Multi-family housing
+                            developments</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-right: 10px;"></i>Commercial office spaces
+                        </li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-right: 10px;"></i>Industrial warehouses</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card" style="padding: 40px;">
+                    <i class="fa-solid fa-microchip" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                    <h3 style="color: white; margin: 25px 0 20px; font-size: 1.8rem;">Technology Investment</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                        Strategic equity positions in innovative technology companies, with a focus on AI, clean energy,
+                        and enterprise software solutions that align with our global operational needs.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-right: 10px;"></i>Artificial Intelligence
+                            startups</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-right: 10px;"></i>Renewable energy technology
+                        </li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-right: 10px;"></i>Agricultural tech solutions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="detail-grid" style="margin-top: 40px;">
+                <div class="glass-card" style="padding: 40px;">
+                    <i class="fa-solid fa-chart-line" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                    <h3 style="color: white; margin: 25px 0 20px; font-size: 1.8rem;">Capital Markets</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                        Active participation in US equity and bond markets, leveraging our global insights to identify
+                        undervalued opportunities and manage risk across diverse asset classes.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-right: 10px;"></i>Public equity investments
+                        </li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-right: 10px;"></i>Corporate bonds</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-right: 10px;"></i>Treasury securities</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card" style="padding: 40px;">
+                    <i class="fa-solid fa-handshake" style="font-size: 3rem; color: var(--accent-gold);"></i>
+                    <h3 style="color: white; margin: 25px 0 20px; font-size: 1.8rem;">Strategic Partnerships</h3>
+                    <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                        Facilitating cross-border collaborations between American firms and our Middle Eastern/African
+                        operations, enabling technology transfer, trade agreements, and joint ventures.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-right: 10px;"></i>Export-import facilitation
+                        </li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-right: 10px;"></i>Technology licensing</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                                style="color: var(--accent-gold); margin-right: 10px;"></i>Joint venture structuring
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
     <section class="section-premium">
         <div class="container">
-            <div class="detail-grid">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 80px;">Growth <span
+                    class="gold-gradient-text">Timeline</span></h2>
 
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="timeline-item">
+                    <h4 style="color: white; font-size: 1.3rem; margin-bottom: 10px;">June 2024 - Formation</h4>
+                    <p style="color: var(--text-muted); line-height: 1.8;">
+                        IGM Investments USA LLC officially registered with the California Secretary of State,
+                        establishing
+                        our legal presence in the United States with headquarters in Pasadena, CA.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4 style="color: white; font-size: 1.3rem; margin-bottom: 10px;">Q3 2024 - Initial Investments</h4>
+                    <p style="color: var(--text-muted); line-height: 1.8;">
+                        Deployed initial capital of $15M across three commercial real estate properties in Southern
+                        California and seed investments in two clean energy technology startups.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4 style="color: white; font-size: 1.3rem; margin-bottom: 10px;">Q4 2024 - Portfolio Expansion</h4>
+                    <p style="color: var(--text-muted); line-height: 1.8;">
+                        Expanded asset base to $35M through strategic acquisitions in Texas and Florida markets,
+                        establishing partnerships with leading US investment firms.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4 style="color: white; font-size: 1.3rem; margin-bottom: 10px;">2025 Targets</h4>
+                    <p style="color: var(--text-muted); line-height: 1.8;">
+                        Projected growth to $100M in AUM through continued real estate acquisition, technology venture
+                        capital,
+                        and strategic partnership development across North America.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Details -->
+    <section class="section-premium" style="background: rgba(255,255,255,0.02); padding: 100px 0;">
+        <div class="container">
+            <div class="detail-grid">
                 <div class="detail-text">
-                    <h2 class="section-title">Strategic <span class="gold-gradient-text">Expansion</span></h2>
+                    <h2 class="section-title">Legal <span class="gold-gradient-text">Framework</span></h2>
                     <p class="lead-text" style="color: #ccc; font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px;">
-                        Established in Pasadena, California, IGM INVESTMENTS USA LLC represents our commitment to global
-                        economic integration.
-                        As a fully registered Limited Liability Company (June 11, 2024), we leverage the robust American
-                        financial ecosystem to identify
-                        and secure high-yield assets.
+                        Our operations are fully compliant with United States federal and state regulations, ensuring
+                        transparency, accountability, and the highest standards of corporate governance.
                     </p>
 
                     <ul class="feature-list" style="list-style: none;">
                         <li>
-                            <i class="fa-solid fa-chart-line fa-2x"></i>
-                            <div>
-                                <h4 style="color: white; font-size: 1.2rem;">Asset Management</h4>
-                                <p style="color: var(--text-muted);">Curating a diversified portfolio including real
-                                    estate, technology equities, and industrial bonds.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-handshake fa-2x"></i>
-                            <div>
-                                <h4 style="color: white; font-size: 1.2rem;">Strategic Partnerships</h4>
-                                <p style="color: var(--text-muted);">Collaborating with US-based firms to facilitate
-                                    cross-border trade and technology transfer to our MENA operations.</p>
-                            </div>
-                        </li>
-                        <li>
                             <i class="fa-solid fa-shield-halved fa-2x"></i>
                             <div>
-                                <h4 style="color: white; font-size: 1.2rem;">Regulatory Compliance</h4>
-                                <p style="color: var(--text-muted);">Approved by the California Secretary of State,
-                                    maintaining the highest standards of corporate governance.</p>
+                                <h4 style="color: white; font-size: 1.2rem;">SEC Compliance</h4>
+                                <p style="color: var(--text-muted);">Full adherence to Securities and Exchange
+                                    Commission
+                                    regulations governing investment activities and reporting requirements.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-scale-balanced fa-2x"></i>
+                            <div>
+                                <h4 style="color: white; font-size: 1.2rem;">State Registration</h4>
+                                <p style="color: var(--text-muted);">Licensed and registered with the California
+                                    Secretary
+                                    of State, maintaining good standing with all regulatory authorities.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-file-contract fa-2x"></i>
+                            <div>
+                                <h4 style="color: white; font-size: 1.2rem;">Corporate Governance</h4>
+                                <p style="color: var(--text-muted);">Structured with clear bylaws, independent
+                                    oversight,
+                                    and transparent reporting mechanisms to protect stakeholder interests.</p>
                             </div>
                         </li>
                     </ul>
-
                 </div>
 
                 <div class="glass-card">
@@ -202,9 +401,25 @@
                     <div
                         style="margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
                         <span
+                            style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">Entity
+                            Number</span>
+                        <span style="color: white; font-size: 1.2rem;">202462612277</span>
+                    </div>
+
+                    <div
+                        style="margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                        <span
                             style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">Headquarters</span>
                         <span style="color: white; font-size: 1.1rem;">2176 E. Villa Street<br>Pasadena, CA 91107,
                             USA</span>
+                    </div>
+
+                    <div
+                        style="margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                        <span
+                            style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">Formation
+                            Date</span>
+                        <span style="color: white; font-size: 1.1rem;">June 11, 2024</span>
                     </div>
 
                     <div class="stat-grid-premium" style="margin-top: 0; grid-template-columns: 1fr 1fr;">
@@ -215,8 +430,8 @@
                         </div>
                         <div>
                             <span
-                                style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">Formed</span>
-                            <span style="color: white; font-weight: 700;">2024</span>
+                                style="display: block; color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase;">Type</span>
+                            <span style="color: white; font-weight: 700;">LLC</span>
                         </div>
                     </div>
                 </div>
@@ -232,7 +447,7 @@
                 style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px;">
                 <div class="footer-brand">
                     <img src="images/logo.png" alt="IGM Logo" style="width: 100px; margin-bottom: 20px;">
-                    <p style="color: var(--text-muted); line-height: 1.8;"> International Group for Mining,
+                    <p style="color: var(--text-muted); line-height: 1.8;">International Group for Mining,
                         Construction, and Agricultural Development.</p>
                 </div>
                 <div class="footer-links">
