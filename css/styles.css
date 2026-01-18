@@ -1115,19 +1115,9 @@ body.menu-open {
     margin: 0;
 }
 
-.mobile-nav-item {
-    font-family: var(--font-heading);
-    font-size: 2.22rem;
-    color: var(--text-main);
-    text-decoration: none;
-    display: block;
-    margin: 20px 0;
-    transition: color 0.3s ease;
-}
 
-.mobile-menu-overlay.open .mobile-nav-item {
-    animation: fadeInUp 0.5s forwards;
-}
+
+.mobile-menu-overlay.open 
 
 .mobile-menu-overlay.open .mobile-nav-item:nth-child(1) {
     animation-delay: 0.1s;
@@ -1471,4 +1461,23 @@ html[dir="rtl"] .footer-links a:hover {
         margin-bottom: 35px !important;
         text-align: center !important;
     }
+}
+/* NUCLEAR FIX FOR MOBILE MENU */
+.mobile-nav-item {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    animation: none !important;
+    color: white !important;
+    font-size: 2rem !important;
+    margin: 20px 0 !important;
+    text-align: center !important;
+    font-family: var(--font-heading) !important;
+}
+
+.mobile-menu-overlay.open .mobile-nav-item {
+    opacity: 1 !important;
+    animation: none !important;
+    visibility: visible !important;
 }
