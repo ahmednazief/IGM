@@ -1091,6 +1091,7 @@ h5 {
 .mobile-menu-overlay.open {
     opacity: 1;
     visibility: visible;
+    /* Critical: Makes menu visible when open */
 }
 
 .mobile-nav-links {
