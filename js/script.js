@@ -97,10 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!menuOpen) {
                 menuBtn.classList.add('open');
                 mobileMenu.classList.add('open');
+                document.body.classList.add('menu-open');
                 menuOpen = true;
             } else {
                 menuBtn.classList.remove('open');
                 mobileMenu.classList.remove('open');
+                document.body.classList.remove('menu-open');
                 menuOpen = false;
             }
         });
@@ -111,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             menuBtn.classList.remove('open');
             mobileMenu.classList.remove('open');
+            document.body.classList.remove('menu-open');
             menuOpen = false;
         });
     });
