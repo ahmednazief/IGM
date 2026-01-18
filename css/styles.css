@@ -1547,9 +1547,14 @@ html[dir="rtl"] .mobile-menu-overlay .lang-switch {
     /* FontAwesome Globe */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    font-size: 1.4rem;
-    line-height: 1;
-    display: block;
+    font-size: 1.5rem;
+    /* Reset any baseline bias */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
     color: var(--accent-gold);
     /* Perfect centering fix */
 }
