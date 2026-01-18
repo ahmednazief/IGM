@@ -1220,9 +1220,7 @@ html[dir="rtl"] .nav-links {
 }
 
 html[dir="rtl"] .menu-btn {
-    margin-right: auto;
-    /* Push to left in RTL flex container if needed, or adjust alignment */
-    /* Ensure no conflict with logo */
+    /* margin-right rule removed */
 }
 
 
