@@ -1486,8 +1486,7 @@ html[dir="rtl"] .footer-links a:hover {
 }
 
 /* Mobile Menu - Safe Visual Polish */
-.mobile-nav-item,
-.mobile-menu-overlay .lang-switch {
+.mobile-nav-item {
     font-family: 'Playfair Display', serif;
     /* Premium Heading Font */
     font-size: min(4vh, 2.2rem);
@@ -1504,6 +1503,51 @@ html[dir="rtl"] .footer-links a:hover {
     letter-spacing: 1px;
     position: relative;
     padding-bottom: 5px;
+}
+
+/* Mobile Language Switch - Top Left Icon */
+.mobile-menu-overlay .lang-switch {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    /* LTR Position */
+    right: auto;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0 !important;
+    /* Hide text */
+    text-decoration: none;
+    z-index: 2002;
+    /* Above everything */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    transition: all 0.3s ease;
+}
+
+html[dir="rtl"] .mobile-menu-overlay .lang-switch {
+    left: auto;
+    right: 30px;
+    /* RTL Position */
+}
+
+.mobile-menu-overlay .lang-switch::before {
+    content: '\f0ac';
+    /* FontAwesome Globe */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+}
+
+.mobile-menu-overlay .lang-switch:hover {
+    background: rgba(197, 160, 89, 0.2);
+    transform: rotate(15deg);
+    border-color: var(--accent-gold);
 }
 
 /* Gold Separator / Accent */
@@ -1543,13 +1587,25 @@ html[dir="rtl"] .footer-links a:hover {
     /* Explicitly disable entrance animations */
 }
 
-/* Arabic Mobile Menu Overrides */
-html[dir="rtl"] .mobile-nav-item,
-.mobile-menu-overlay .lang-switch {
-    font-family: 'Cairo', sans-serif !important;
-    font-weight: 700 !important;
-    /* Bold for legibility on blur */
-    letter-spacing: 0 !important;
+/* Arabic Global Typography Overrides */
+html[dir="rtl"],
+html[dir="rtl"] body {
+    font-family: var(--font-body-ar) !important;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .section-title,
+html[dir="rtl"] .nav-item,
+html[dir="rtl"] .mobile-nav-item {
+    font-family: var(--font-heading-ar) !important;
+}
+
+html[dir="rtl"] .mobile-nav-item {
     /* Arabic requires connected letters */
     font-size: min(4vh, 2rem) !important;
 }
@@ -1575,7 +1631,6 @@ html[dir="rtl"] .mobile-nav-item,
     }
 
     .mobile-nav-item,
-    .mobile-menu-overlay .lang-switch,
     html[dir="rtl"] .mobile-nav-item {
         font-size: 1.6rem !important;
     }
