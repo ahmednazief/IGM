@@ -418,14 +418,25 @@ h5 {
     padding: 150px 0;
 }
 
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
     gap: 80px;
     align-items: center;
-}
-
-.about-image-wrapper {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
