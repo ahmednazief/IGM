@@ -676,11 +676,14 @@ h5 {
 
 .glass-card {
     background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
     border: 1px solid rgba(197, 160, 89, 0.2);
     padding: 40px;
-    border-radius: 12px;
+    border-radius: 20px;
     transition: all 0.3s ease;
     margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
 }
 
 .contact-card:hover .contact-icon {
@@ -981,15 +984,7 @@ h5 {
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
-.glass-card {
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    padding: 50px;
-    position: relative;
-    overflow: hidden;
-}
+/* Merged with previous glass-card definition */
 
 .glass-card::before {
     content: '';
