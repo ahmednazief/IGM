@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGM INVESTMENTS USA LLC | International Group</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .project-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(5, 5, 16, 0.7), rgba(5, 5, 16, 0.9)), url('images/owner_office.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .hero-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .flag-icon {
+            width: 60px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+            align-items: start;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-label {
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="IGM Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="subsidiaries.html" class="nav-item active">Our Group</a></li>
+                <li><a href="services.html" class="nav-item">Services</a></li>
+                <li><a href="investments.html" class="nav-item">Investments Abroad</a></li>
+                <li><a href="portfolio.html" class="nav-item">Portfolio</a></li>
+                <!-- Back to Home -->
+                <li><a href="igm-usa-ar.html" class="lang-switch" style="font-family: 'Cairo', sans-serif;">العربية</a>
+                </li>
+            </ul>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
+        <div class="mobile-menu-overlay">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-nav-item">Home</a></li>
+                <li><a href="subsidiaries.html" class="mobile-nav-item active">Our Group</a></li>
+                <li><a href="igm-usa-ar.html" class="lang-switch" style="font-family: 'Cairo', sans-serif;">العربية</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="project-hero">
+        <div class="container">
+            <h1 class="hero-title">
+                <img src="https://flagcdn.com/w160/us.png" alt="USA Flag" class="flag-icon">
+                <span>IGM INVESTMENTS <span class="text-gold">USA LLC</span></span>
+            </h1>
+            <p class="hero-subtitle">Officially Registered & Accredited in California</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="project-content section">
+        <div class="container">
+
+            <div class="detail-grid">
+                <!-- Text Content -->
+                <div class="detail-text">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Corporate <span class="text-gold">Profile</span>
+                    </h2>
+
+                    <div class="info-card">
+                        <i class="fa-solid fa-building-columns"
+                            style="color: var(--accent-gold); font-size: 2rem; margin-bottom: 15px;"></i>
+                        <h3 style="margin-bottom: 20px; font-size: 1.5rem;">Legal Entity Status</h3>
+
+                        <div style="margin-bottom: 20px;">
+                            <span class="info-label">Company Name</span>
+                            <span class="info-value">IGM INVESTMENTS USA LLC</span>
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <span class="info-label">Entity Type</span>
+                            <span class="info-value">Limited Liability Company (LLC)</span>
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <span class="info-label">Registration Jurisdiction</span>
+                            <span class="info-value">State of California, USA</span>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px;">
+                                <i class="fa-solid fa-circle-check" style="color: var(--accent-gold);"></i>
+                                Approved by California Secretary of State
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 style="margin-bottom: 20px; font-size: 1.5rem;">Registration Details</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <span class="info-label">Entity Number</span>
+                                <span class="info-value">202462612277</span>
+                            </div>
+                            <div>
+                                <span class="info-label">Registration Date</span>
+                                <span class="info-value">June 11, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-label">Registered Address</span>
+                        <span class="info-value">2176 E. Villa Street, Pasadena, CA 91107, USA</span>
+                    </div>
+
+                </div>
+
+                <!-- Image/Visuals -->
+                <div class="detail-image">
+                    <!-- Using a placeholder office image or generic investment image since user said "add from your side" -->
+                    <!-- I'll use a placeholder from unsplash source if needed or existing images. I'll reuse 'images/owner_office.jpg' but styled differently or another one if I had one. 
+                          Since I don't have new generics, I will use a solid color block or re-use existing generic asset or just text. 
+                          Actually I will simply use the owner_office.jpg again but maybe different crop or I can use a color overlay.
+                          Wait, let's look at available images in the file list from earlier.
+                          I see 'images/owner_office.jpg'. I'll use that for now.
+                     -->
+                    <img src="images/owner_office.jpg" alt="IGM USA Office"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 30px;">
+
+                    <div class="info-card">
+                        <h3 style="margin-bottom: 20px; font-size: 1.5rem;">Scope of Activity</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                            <strong>Investments</strong>
+                        </p>
+                        <p style="color: var(--text-muted); line-height: 1.6;">
+                            IGM INVESTMENTS USA LLC operates as the strategic investment arm of the group in the United
+                            States.
+                            Leveraging the strong economic framework of California, the company identifies and manages
+                            high-value investment opportunities
+                            across various sectors including real estate, technology, and industrial development.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #02020a; border-top: 1px solid rgba(255,255,255,0.05); padding: 80px 0 30px;">
+        <div class="container">
+            <div class="footer-grid"
+                style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px;">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="IGM Logo" style="width: 100px; margin-bottom: 20px;">
+                    <p style="color: var(--text-muted); line-height: 1.8;"> International Group for Mining,
+                        Construction, and Agricultural Development.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 style="color: white; margin-bottom: 25px;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" style="color: var(--text-muted); text-decoration: none;">Home</a></li>
+                        <li><a href="subsidiaries.html" style="color: var(--text-muted); text-decoration: none;">Our
+                                Group</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 style="color: white; margin-bottom: 25px;">Contact</h4>
+                    <p style="color: var(--text-muted);">Tower D, Ammar Plaza Towers, Nasr City, Cairo, Egypt</p>
+                </div>
+            </div>
+            <div class="footer-bottom"
+                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; text-align: center;">
+                <p style="color: var(--text-muted);">&copy; 2026 IGM. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
