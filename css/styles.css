@@ -212,13 +212,19 @@ h5 {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
     position: relative;
-    overflow-y: auto; align-items: flex-start; /* Allow scroll if needed */
+    overflow-y: hidden;
+    /* Hide scrollbar if not needed, or auto */
+    align-items: center;
     text-align: center;
+    padding-top: 150px;
+    /* Push content down to clear fixed header */
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    /* align-items: flex-start was forcing it top, let's use padding to position */
 }
 
 .video-background {
@@ -274,8 +280,9 @@ h5 {
     text-decoration: none;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
-    overflow-y: auto; align-items: flex-start; /* Allow scroll if needed */
     padding: 30px;
+    overflow: hidden;
+    /* Ensure rounded corners clip content */
 }
 
 .doc-card::before {
@@ -346,7 +353,8 @@ h5 {
     /* Pillow shape */
     transition: all 0.3s var(--ease-out);
     position: relative;
-    overflow-y: auto; align-items: flex-start; /* Allow scroll if needed */
+    overflow: hidden;
+    /* Ensure pill shape clips content */
     z-index: 1;
     opacity: 0;
     /* JS Reveal */
@@ -442,7 +450,8 @@ h5 {
     align-items: center;
     position: relative;
     border-radius: 8px;
-    overflow-y: auto; align-items: flex-start; /* Allow scroll if needed */
+    overflow: hidden;
+    /* Ensure rounded corners clip content */
 }
 
 .about-image-wrapper img {
@@ -503,7 +512,8 @@ h5 {
 .project-item {
     position: relative;
     border-radius: 10px;
-    overflow-y: auto; align-items: flex-start; /* Allow scroll if needed */
+    overflow: hidden;
+    /* Ensure rounded corners clip content */
     cursor: none;
     /* Custom cursor override */
 }
@@ -636,7 +646,8 @@ h5 {
     padding: 40px 30px;
     text-align: center;
     position: relative;
-    overflow-y: auto; align-items: flex-start; /* Allow scroll if needed */
+    overflow: hidden;
+    /* Ensure rounded corners clip content */
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -687,7 +698,8 @@ h5 {
     margin-bottom: 40px;
     /* Spacing Fix */
     position: relative;
-    overflow-y: auto; align-items: flex-start; /* Allow scroll if needed */
+    overflow: hidden;
+    /* Ensure rounded corners clip content */
 }
 
 .contact-card:hover .contact-icon {
@@ -1082,18 +1094,24 @@ h5 {
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(5, 5, 16, 0.95);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background: rgba(5, 5, 16, 0.9);
+    /* Darker for premium feel */
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    /* Stronger blur */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    /* Align top to allow scrolling */
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all 0.5s var(--ease-out);
     transition: all 0.5s var(--ease-out);
     z-index: 2000;
-    overflow-y: auto; align-items: flex-start; /* Allow scroll if needed */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    padding: 80px 0 40px;
+    /* Top padding for close button, bottom for safe area */
 }
 
 .mobile-menu-overlay.open {
@@ -1103,7 +1121,9 @@ h5 {
 
 /* Prevent body scroll when menu is open */
 body.menu-open {
-    overflow-y: auto; align-items: flex-start; /* Allow scroll if needed */
+    overflow-y: auto;
+    align-items: flex-start;
+    /* Allow scroll if needed */
     position: fixed;
     width: 100%;
 }
@@ -1111,20 +1131,21 @@ body.menu-open {
 .mobile-nav-links {
     list-style: none;
     text-align: center;
-    padding: 20px 0;
-    margin: auto; /* Centers vertically if parent is flex-start */
+    padding: 0 20px;
+    margin: auto 0;
+    /* Center vertically if space allows, scroll if not */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4vh; /* Responsive spacing based on height */
-    min-height: 100%; /* Ensure it takes full height for centering */
+    gap: calc(2vh + 20px);
+    /* Responsive gap */
     width: 100%;
+    min-height: min-content;
+    /* Allow it to shrink/grow */
 }
 
 
-
-.mobile-menu-overlay.open 
 
 .mobile-menu-overlay.open .mobile-nav-item:nth-child(1) {
     animation-delay: 0.1s;
@@ -1471,59 +1492,95 @@ html[dir="rtl"] .footer-links a:hover {
 }
 
 /* Mobile Menu - Safe Visual Polish */
-.mobile-nav-item, .mobile-menu-overlay .lang-switch {
-    font-family: 'Playfair Display', serif; /* Premium Heading Font */
+.mobile-nav-item,
+.mobile-menu-overlay .lang-switch {
+    font-family: 'Playfair Display', serif;
+    /* Premium Heading Font */
     font-size: 2.2rem;
     color: #ffffff;
     text-decoration: none;
     display: block;
-    margin: 0; /* Increased spacing for clean look */
-    opacity: 1; /* Force visible */
+    margin: 0;
+    opacity: 1;
     visibility: visible;
     transform: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
     font-weight: 500;
     letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 5px;
 }
 
-.mobile-nav-item:hover, .mobile-menu-overlay .lang-switch:hover,
-.mobile-nav-item:active, .mobile-menu-overlay .lang-switch:active,
-.mobile-nav-item.active, .mobile-menu-overlay .lang-switch.active {
-    color: #C5A059; /* Gold accent */
-    transform: scale(1.05); /* Subtle scale on interaction only */
+/* Gold Separator / Accent */
+.mobile-nav-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--accent-gold);
+    margin: 5px auto 0;
+    transition: width 0.3s ease;
+    opacity: 0.7;
+}
+
+.mobile-nav-item:hover::after {
+    width: 40px;
+}
+
+.mobile-nav-item:hover,
+.mobile-menu-overlay .lang-switch:hover,
+.mobile-nav-item:active,
+.mobile-menu-overlay .lang-switch:active,
+.mobile-nav-item.active,
+.mobile-menu-overlay .lang-switch.active {
+    color: #C5A059;
+    /* Gold accent */
+    transform: scale(1.05);
+    /* Subtle scale on interaction only */
 }
 
 /* Ensure overlay open state doesn't hide anything */
-.mobile-menu-overlay.open .mobile-nav-item, .mobile-menu-overlay .lang-switch {
+.mobile-menu-overlay.open .mobile-nav-item,
+.mobile-menu-overlay .lang-switch {
     opacity: 1;
     visibility: visible;
-    animation: none; /* Explicitly disable entrance animations */
+    animation: none;
+    /* Explicitly disable entrance animations */
 }
 
 /* Arabic Mobile Menu Overrides */
-html[dir="rtl"] .mobile-nav-item, .mobile-menu-overlay .lang-switch {
+html[dir="rtl"] .mobile-nav-item,
+.mobile-menu-overlay .lang-switch {
     font-family: 'Cairo', sans-serif !important;
-    font-weight: 700 !important; /* Bold for legibility on blur */
-    letter-spacing: 0 !important; /* Arabic requires connected letters */
+    font-weight: 700 !important;
+    /* Bold for legibility on blur */
+    letter-spacing: 0 !important;
+    /* Arabic requires connected letters */
     font-size: 2rem !important;
 }
 
 /* Fix Header Overlap on Global Branches Mobile */
 @media (max-width: 768px) {
     .branch-hero {
-        padding-top: 120px !important;
-        height: auto !important; /* Allow it to grow if needed */
-        min-height: 70vh;
+        padding-top: 150px !important;
+        /* Increased padding */
+        height: auto !important;
+        min-height: 60vh;
+        padding-bottom: 60px;
     }
 }
 
 /* Adjustments for short screens (Landscape / Small Phones) */
 @media (max-height: 700px) {
     .mobile-nav-links {
-        gap: 20px; /* Smaller fixed gap */
-        padding: 40px 0; /* Extra scroll space */
+        gap: 20px;
+        /* Smaller fixed gap */
+        padding: 40px 0;
+        /* Extra scroll space */
     }
-    .mobile-nav-item, .mobile-menu-overlay .lang-switch,
+
+    .mobile-nav-item,
+    .mobile-menu-overlay .lang-switch,
     html[dir="rtl"] .mobile-nav-item {
         font-size: 1.6rem !important;
     }
