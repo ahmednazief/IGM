@@ -1492,3 +1492,11 @@ html[dir="rtl"] .footer-links a:hover {
     visibility: visible;
     animation: none; /* Explicitly disable entrance animations */
 }
+
+/* Arabic Mobile Menu Overrides */
+html[dir="rtl"] .mobile-nav-item {
+    font-family: 'Cairo', sans-serif !important;
+    font-weight: 700 !important; /* Bold for legibility on blur */
+    letter-spacing: 0 !important; /* Arabic requires connected letters */
+    font-size: 2rem !important;
+}
