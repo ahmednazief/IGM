@@ -242,13 +242,10 @@ h5 {
 
 .hero-title {
     font-size: 6rem;
-    line-height: 1.6;
-    /* Increased from 1 to fix cutoff */
+    line-height: 1.2;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    /* Extra buffer */
     opacity: 0;
-    /* JS Reveal */
     transform: translateY(30px);
 }
 
@@ -1110,7 +1107,51 @@ h5 {
     -webkit-transition: all 0.5s var(--ease-out);
     transition: all 0.5s var(--ease-out);
     z-index: 2000;
-    padding: 60px 0 20px;
+    padding: 120px 0 20px;
+}
+
+/* Page Hero Global Styling */
+.page-hero,
+.branch-hero,
+.parallax-hero {
+    position: relative;
+    padding-top: 140px !important;
+    padding-bottom: 80px;
+    margin-top: 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 48vh;
+    /* Increased slightly for better mobile presence */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+
+    .page-hero,
+    .branch-hero,
+    .parallax-hero {
+        padding-top: 180px !important;
+        /* Increased to ensure content is below 109px navbar */
+        padding-bottom: 60px;
+        min-height: 50vh;
+    }
+}
+
+/* Fix mobile globe icon overlap with logo */
+.mobile-menu-overlay.open~.navbar .logo {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.open .lang-switch {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    z-index: 2005;
 }
 
 .mobile-menu-overlay.open {
@@ -1313,15 +1354,21 @@ html[dir="rtl"] .contact-item {
         top: 80px;
         /* Adjusted for smaller mobile navbar */
         padding: 10px 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .sector-nav .container {
         gap: 20px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        padding: 0 20px;
     }
 
     .sector-link {
         font-size: 0.8rem;
         letter-spacing: 0;
+        white-space: nowrap;
     }
 }
 
