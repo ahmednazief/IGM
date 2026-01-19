@@ -1103,12 +1103,13 @@ h5 {
     justify-content: center;
     align-items: flex-start;
     /* Align top to allow scrolling */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all 0.5s var(--ease-out);
     transition: all 0.5s var(--ease-out);
     z-index: 2000;
-    /* Enable vertical scrolling */
     padding: 60px 0 20px;
 }
 
@@ -1534,6 +1535,9 @@ html[dir="rtl"] .footer-links a:hover {
     border-radius: 0;
     border: none;
     transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 html[dir="rtl"] .mobile-menu-overlay .lang-switch {
@@ -1595,9 +1599,10 @@ html[dir="rtl"] .mobile-menu-overlay .lang-switch {
 
 /* Ensure overlay open state doesn't hide anything */
 .mobile-menu-overlay.open .mobile-nav-item,
-.mobile-menu-overlay .lang-switch {
+.mobile-menu-overlay.open .lang-switch {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     animation: none;
     /* Explicitly disable entrance animations */
 }
